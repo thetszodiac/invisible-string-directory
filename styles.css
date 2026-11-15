@@ -831,13 +831,13 @@ h2 em {
   }
 
   .spotlight-card {
-    top: 31%;
+    top: 26%;
     height: 66%;
     z-index: 2;
   }
 
   .paper-back {
-    top: 29%;
+    top: 24%;
     height: 66%;
   }
 
@@ -957,12 +957,12 @@ h2 em {
 
   .spotlight-card {
     gap: 10px;
-    top: 31%;
+    top: 26%;
     height: 66%;
   }
 
   .paper-back {
-    top: 29%;
+    top: 24%;
     height: 66%;
   }
 
