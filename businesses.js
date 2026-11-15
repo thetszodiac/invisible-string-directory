@@ -11,6 +11,8 @@ const businesses = [
 
   { name: "Foolery Co.", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Whimsical designs for serendipitous times. Funny graphic tees, protest shirts, and gifts designed by Foolery.", url: "https://www.fooleryco.com", symbol: "F" },
 
+  { name: "Gemma Rose Pins", categories: ["Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Shop Swiftie-inspired enamel pins, stickers, blankets, jewellery, apparel and more.", url: "https://gemmarosepins.com", symbol: "G" },
+
   { name: "Long Story Short Bracelet Co.", categories: ["Jewellery & Accessories"], country: "USA", description: "Shop beautiful friendship bracelets to support Lisa who is a full-time caregiver to her son.", url: "https://www.etsy.com/shop/LSSBraceletCo", symbol: "L" },
 
   { name: "Mango Illustrated", categories: ["Stationery"], country: "USA", description: "Shop their collection of stickers, pens, and notepads - playfully profound, randomly relatable, and made for self-gifting.", url: "https://mangoillustrated.com/collections/all-swiftie?page=5&srsltid=AYCX9vLY4D8WkN3py8ReryhavXRPHQAk19X6IOzFpRKyZlzyzdK0YQrG", symbol: "M" },
