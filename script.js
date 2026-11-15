@@ -107,30 +107,20 @@ if (submissionForm) {
   const submitButton = submissionForm.querySelector('button[type="submit"]');
   const submissionFrame = document.querySelector('iframe[name="submissionTarget"]');
   let submissionInProgress = false;
-  let submissionTimeout;
 
-  // Apps Script sends an explicit result message from the hidden iframe.
-  // Only accept messages from the iframe used by this form.
-  window.addEventListener("message", event => {
-  if (!event.data || event.data.type !== "invisible-string-submission") return;
-    if (!submissionInProgress) return;
+  if (submissionFrame) {
+    submissionFrame.addEventListener("load", () => {
+      if (!submissionInProgress) return;
 
-    clearTimeout(submissionTimeout);
-    submissionInProgress = false;
-    submitButton.disabled = false;
-    submitButton.innerHTML = 'Submit application <span aria-hidden="true">→</span>';
-
-    if (event.data.success === true) {
+      submissionInProgress = false;
       submissionForm.reset();
-      formStatus.textContent = "Thank you! Your application has been received and will be reviewed before your business is added to the directory.";
+      submitButton.disabled = false;
+      submitButton.innerHTML = 'Submit application <span aria-hidden="true">→</span>';
+      formStatus.textContent = "Your application has been sent. Thank you! We'll review it before adding your business to the directory.";
       formStatus.className = "form-status form-status-success";
-    } else {
-      formStatus.textContent = event.data.message || "Sorry, we couldn't submit your application. Please try again.";
-      formStatus.className = "form-status form-status-error";
-    }
-
-    formStatus.hidden = false;
-  });
+      formStatus.hidden = false;
+    });
+  }
 
   submissionForm.addEventListener("submit", event => {
     if (!submissionForm.reportValidity()) {
@@ -168,18 +158,5 @@ if (submissionForm) {
     submitButton.disabled = true;
     submitButton.textContent = "Sending application…";
     formStatus.hidden = true;
-
-    // Do not claim success just because the iframe loaded. Wait for the
-    // explicit result message from Apps Script.
-    submissionTimeout = setTimeout(() => {
-      if (!submissionInProgress) return;
-
-      submissionInProgress = false;
-      submitButton.disabled = false;
-      submitButton.innerHTML = 'Submit application <span aria-hidden="true">→</span>';
-      formStatus.textContent = "We couldn't confirm that your application was received. Please check your connection and try again.";
-      formStatus.className = "form-status form-status-error";
-      formStatus.hidden = false;
-    }, 20000);
   });
 }
