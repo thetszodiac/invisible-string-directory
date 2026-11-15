@@ -167,3 +167,68 @@ button,a,input{ -webkit-tap-highlight-color:transparent }
   }
 }
 
+
+/* Typography and footer logo refinements */
+
+/* Main homepage heading */
+h1 {
+  font-size: clamp(38px, 4.5vw, 60px);
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+}
+
+/* Directory section headings */
+h2 {
+  font-size: clamp(32px, 3.5vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+/* Get listed section heading */
+.join-section h2 {
+  font-size: clamp(34px, 4vw, 46px);
+}
+
+/* Keep footer logo compact */
+.site-footer .footer-brand {
+  display: block;
+  width: 150px;
+  max-width: 150px;
+  min-width: 0;
+  justify-self: start;
+  flex: none;
+}
+
+.site-footer .footer-brand .brand-logo {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 38px;
+    line-height: 1.13;
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .join-section h2 {
+    font-size: 36px;
+  }
+
+  .site-footer .footer-brand {
+    width: 125px;
+    max-width: 125px;
+  }
+
+  .site-footer .footer-brand .brand-logo {
+    max-width: 125px;
+  }
+}
+
