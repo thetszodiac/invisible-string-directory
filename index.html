@@ -110,8 +110,14 @@
             <textarea name="description" rows="5" required placeholder="The Invisible String Directory is intended for Swiftie-owned and Swiftie-inspired small businesses. Tell us a little about your business, what you sell, and how it connects to the Swiftie community."></textarea>
           </label>
 
-          <label class="consent-field">
-            <input type="checkbox" name="consent" value="true" required>
+<input
+  type="checkbox"
+  name="consent"
+  value="true"
+  required
+  oninvalid="this.setCustomValidity('Please confirm your consent before submitting your application.')"
+  onchange="this.setCustomValidity('')"
+>
             <span>I confirm that I’m happy for my business to be featured on The Invisible String Directory, and understand that all submissions are reviewed before being added. <span aria-hidden="true">*</span></span>
           </label>
 
