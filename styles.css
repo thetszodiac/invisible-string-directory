@@ -1075,9 +1075,12 @@ h2 em {
   border-bottom-color: var(--walnut);
 }
 
+walnut);
+}
+
+
 /* Keyboard accessibility */
-.hero-intro a:focus-visible,
-.section p a:focus-visible {
+.hero-intro a:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;
 }
