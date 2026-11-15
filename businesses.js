@@ -17,10 +17,14 @@ const businesses = [
 
   { name: "Mango Illustrated", categories: ["Stationery"], country: "USA", description: "Shop their collection of stickers, pens, and notepads - playfully profound, randomly relatable, and made for self-gifting.", url: "https://mangoillustrated.com/collections/all-swiftie?page=5&srsltid=AYCX9vLY4D8WkN3py8ReryhavXRPHQAk19X6IOzFpRKyZlzyzdK0YQrG", symbol: "M" },
 
+  { name: "The Mock Turtle", categories: ["Art & Prints", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Taylor Swift merchandise including apparel, trinket dishes, puzzles, and themed home goods.", url: "https://themockturtle.co.uk/", symbol: "M" },
+
   { name: "Nova & the new moon", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Swiftie and pop culture inspired sweatshirts, t-shirts, art prints, postcards and more.", url: "https://novaandthenewmoon.com", symbol: "N" },
   
   { name: "The ReSwiftance", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Blending Swiftiehood with progressive politics - shop thematic apparel, stickers and much more.", url: "https://the-reswiftance.printify.me", symbol: "R" },
 
   { name: "Oh Snap Bracelets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Bedazzled keychains, phone charms, bracelets, and more! Bedazzled all the things!", url: "https://www.etsy.com/shop/OhSnapBracelets", symbol: "O" },
+
+  { name: "Sparta Candle Co.", categories: ["Home & Lifestyle"], country: "USA", description: "Intricately designed soap, candles, and home & body products to serve as functional art and add a little magic to everyday life.", url: "https://spartacandleco.com/", symbol: "S" },
 
 ];
