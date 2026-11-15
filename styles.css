@@ -1150,7 +1150,7 @@ h2 em {
 
 .consent-field {
   display: grid;
-  grid-template-columns: 18px 1fr;
+  grid-template-columns: 18px minmax(0, 1fr);
   align-items: start;
   gap: 10px;
   color: var(--muted);
@@ -1158,6 +1158,7 @@ h2 em {
   font-weight: 400;
   line-height: 1.7;
   cursor: pointer;
+  text-align: left;
 }
 
 .consent-field input {
@@ -1165,6 +1166,12 @@ h2 em {
   height: 16px;
   margin: 2px 0 0;
   accent-color: var(--walnut);
+  justify-self: start;
+}
+
+.consent-field > span {
+  display: block;
+  min-width: 0;
 }
 
 .submission-button {
