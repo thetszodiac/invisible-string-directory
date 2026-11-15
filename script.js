@@ -22,7 +22,12 @@ function safeUrl(value) {
 }
 function renderFilterOptions() {
   for (const [groupName, group] of Object.entries(filterGroups)) {
-    group.element.innerHTML = group.values.map((value, index) => {
+    const allOption = groupName === "countries" ? `
+      <label class="filter-option" for="all-countries">
+        <input id="all-countries" type="checkbox" data-group="countries" data-all="true" checked>
+        <span>All countries</span>
+      </label>` : "";
+    group.element.innerHTML = allOption + group.values.map((value, index) => {
       const id = `${groupName}-${index}`;
       return `<label class="filter-option" for="${id}">
         <input id="${id}" type="checkbox" data-group="${groupName}" value="${escapeHtml(value)}">
@@ -63,8 +68,21 @@ Object.entries(filterGroups).forEach(([groupName, group]) => {
   group.element.addEventListener("change", event => {
     const input = event.target;
     if (input.matches('input[type="checkbox"]')) {
-      if (input.checked) selected[groupName].add(input.value);
-      else selected[groupName].delete(input.value);
+      if (groupName === "countries" && input.dataset.all === "true") {
+        if (input.checked) {
+          selected.countries.clear();
+          group.element.querySelectorAll('input[data-all="false"], input:not([data-all])').forEach(option => { option.checked = false; });
+        } else if (!selected.countries.size) {
+          input.checked = true;
+        }
+      } else {
+        if (input.checked) selected[groupName].add(input.value);
+        else selected[groupName].delete(input.value);
+        if (groupName === "countries") {
+          const allCheckbox = group.element.querySelector('[data-all="true"]');
+          if (allCheckbox) allCheckbox.checked = selected.countries.size === 0;
+        }
+      }
       renderBusinesses();
     }
   });
@@ -72,7 +90,7 @@ Object.entries(filterGroups).forEach(([groupName, group]) => {
 searchInput.addEventListener("input", renderBusinesses);
 document.getElementById("clearFilters").addEventListener("click", () => {
   Object.values(selected).forEach(set => set.clear());
-  document.querySelectorAll(".filter-option input").forEach(input => { input.checked = false; });
+  document.querySelectorAll(".filter-option input").forEach(input => { input.checked = input.dataset.all === "true"; });
   searchInput.value = "";
   renderBusinesses();
 });

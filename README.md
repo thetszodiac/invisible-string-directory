@@ -8,7 +8,7 @@ A romantic, editorial-style worldwide directory concept for Swiftie-owned busine
 - `index.html` — website structure and content
 - `styles.css` — brand styling and responsive layouts
 - `businesses.js` — directory data
-- `script.js` — search, filters and category shortcuts
+- `script.js` — search and filters (including an All countries option)
 
 ## Preview locally
 Open `index.html` in a browser. No build tools or package installation are required.
