@@ -381,3 +381,64 @@ h2 {
   }
 }
 
+
+/* Business Spotlight heading */
+.spotlight-heading {
+  position: absolute;
+  top: -65px;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.spotlight-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.spotlight-heading h2 {
+  font-size: clamp(25px, 2.8vw, 36px);
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* Make room for the heading above the feature card */
+.hero-art {
+  height: 500px;
+}
+
+.spotlight-card {
+  top: 22%;
+  height: 70%;
+}
+
+.paper-back {
+  top: 20%;
+  height: 70%;
+}
+
+@media (max-width: 800px) {
+  .hero-art {
+    height: 420px;
+  }
+
+  .spotlight-heading {
+    top: 0;
+  }
+
+  .spotlight-heading h2 {
+    font-size: 29px;
+  }
+
+  .spotlight-card {
+    top: 25%;
+    height: 70%;
+  }
+
+  .paper-back {
+    top: 23%;
+    height: 70%;
+  }
+}
+
+
