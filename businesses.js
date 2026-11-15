@@ -1,7 +1,7 @@
 
 const businesses = [
 
-  { name: "The Cardigan Department", categories: ["Clothing & Apparel", “Jewellery & Accessories”], country: "UK", description: "Discover unique cardigans, sweaters and knitwear inspired by music, film and pop culture.", url: "https://thecardigandepartment.com/", symbol: "C" },
+  { name: "The Cardigan Department", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Discover unique cardigans, sweaters and knitwear inspired by music, film and pop culture.", url: "https://thecardigandepartment.com/", symbol: "C" },
 
   { name: "Daisy Wood Design", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Explore vibrant, eco-friendly planters and home decor designed to brighten spaces and inspire joy.", url: "https://www.daisywooddesign.com/shop", symbol: "D" },
 
@@ -13,9 +13,9 @@ const businesses = [
 
   { name: "Mango Illustrated", categories: ["Stationery"], country: "USA", description: "Shop their collection of stickers, pens, and notepads - playfully profound, randomly relatable, and made for self-gifting.", url: "https://mangoillustrated.com/collections/all-swiftie?page=5&srsltid=AYCX9vLY4D8WkN3py8ReryhavXRPHQAk19X6IOzFpRKyZlzyzdK0YQrG", symbol: "M" },
 
-  { name: "Nova & the new moon", categories: [“Art & Prints”, “Clothing & Apparel”, "Jewellery & Accessories"], country: "UK", description: "Swiftie and pop culture inspired sweatshirts, t-shirts, art prints, postcards and more.", url: "https://novaandthenewmoon.com", symbol: "N" },
+  { name: "Nova & the new moon", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Swiftie and pop culture inspired sweatshirts, t-shirts, art prints, postcards and more.", url: "https://novaandthenewmoon.com", symbol: "N" },
   
-  { name: "The ReSwiftance", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Blending Swiftiehood with progressive politics, shop thematic apparel, stickers and much more.", url: “https://the-reswiftance.printify.me", symbol: "R" },
+  { name: "The ReSwiftance", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Blending Swiftiehood with progressive politics, shop thematic apparel, stickers and much more.", url: "https://the-reswiftance.printify.me", symbol: "R" },
 
   { name: "Oh Snap Bracelets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Bedazzled keychains, phone charms, bracelets, and more! Bedazzled all the things!", url: "https://www.etsy.com/shop/OhSnapBracelets", symbol: "O" },
 
