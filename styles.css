@@ -331,3 +331,35 @@ h2 {
     padding-bottom: 10px;
   }
 }
+
+
+/* Readability refinement: increase everyday interface and listing text */
+.hero-intro { font-size: 16px; }
+.section-heading > p { font-size: 14px; }
+.search-box input { font-size: 14px; }
+.filter-panel summary { font-size: 14px; }
+.filter-hint { font-size: 11px; }
+.filter-option { font-size: 13px; line-height: 1.5; }
+.filter-actions, .filter-actions button { font-size: 12px; }
+.result-row { font-size: 12px; }
+.demo-label { font-size: 11px; }
+.business-card h3 { font-size: 24px; }
+.business-card p { font-size: 14px; line-height: 1.75; }
+.card-tags span { font-size: 10px; padding: 6px 9px; }
+.card-bottom { font-size: 11px; }
+.button, .quiet-link { font-size: 13px; }
+.join-section > div:first-child > p:last-child { font-size: 14px; line-height: 1.85; }
+.join-card p { font-size: 13px; line-height: 1.8; }
+.site-footer p, .site-footer > span { font-size: 10px; line-height: 1.8; }
+
+@media (max-width: 480px) {
+  .hero-intro, .section-heading > p { font-size: 14px; }
+  .filter-panel summary { font-size: 14px; }
+  .filter-hint { font-size: 10px; }
+  .filter-option { font-size: 14px; }
+  .business-card h3 { font-size: 23px; }
+  .business-card p { font-size: 14px; }
+  .card-tags span { font-size: 10px; }
+  .card-bottom { font-size: 11px; }
+  .button, .quiet-link { font-size: 13px; }
+}
