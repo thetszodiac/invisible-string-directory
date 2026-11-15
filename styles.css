@@ -442,3 +442,34 @@ h2 {
 }
 
 
+/* Fix spacing between Spotlight heading and card */
+@media (max-width: 800px) {
+  .hero-art {
+    height: 520px;
+  }
+
+  .spotlight-heading {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .spotlight-heading h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    max-width: 95%;
+  }
+
+  .spotlight-card {
+    top: 42%;
+    height: 55%;
+    z-index: 2;
+  }
+
+  .paper-back {
+    top: 40%;
+    height: 55%;
+  }
+}
+
