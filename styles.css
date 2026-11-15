@@ -1057,3 +1057,29 @@ h2 em {
     text-align: left;
   }
 }
+
+
+/* Elegant inline text links */
+.hero-intro a,
+.section p a {
+  color: var(--walnut);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-intro a:hover,
+.section p a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--walnut);
+}
+
+/* Keyboard accessibility */
+.hero-intro a:focus-visible,
+.section p a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
