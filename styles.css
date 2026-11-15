@@ -1087,3 +1087,140 @@ h2 em {
   outline-offset: 4px;
 }
 
+
+
+/* 15. Business listing application form */
+.join-copy h2 {
+  color: #fff;
+}
+
+.join-card .form-intro {
+  margin-bottom: 22px;
+}
+
+#businessSubmissionForm {
+  display: grid;
+  gap: 17px;
+  margin-top: 22px;
+}
+
+.form-field {
+  display: grid;
+  gap: 7px;
+  color: var(--walnut);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-field > span > span,
+.consent-field > span > span {
+  color: #A36E55;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: #fff;
+  color: var(--ink);
+  font: 14px/1.6 var(--sans);
+}
+
+.form-field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #9A9086;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--gold);
+  outline: 2px solid #B69A6533;
+  outline-offset: 1px;
+}
+
+.consent-field {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: start;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+.consent-field input {
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  accent-color: var(--walnut);
+}
+
+.submission-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 13px 18px;
+  border: 1px solid var(--walnut);
+  border-radius: 2px;
+  background: var(--walnut);
+  color: #fff;
+  font: 700 13px var(--sans);
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.submission-button:hover:not(:disabled) {
+  border-color: #625346;
+  background: #625346;
+}
+
+.submission-button:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
+.form-note {
+  margin: -5px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.form-status {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.form-status-success {
+  border: 1px solid #C9D5C3;
+  background: #F1F5EE;
+  color: #40543B;
+}
+
+.form-status-error {
+  border: 1px solid #E2C7BD;
+  background: #FAF0EC;
+  color: #854B3C;
+}
+
+@media (max-width: 800px) {
+  .join-card {
+    width: 100%;
+  }
+}

@@ -97,3 +97,71 @@ document.getElementById("clearFilters").addEventListener("click", () => {
 document.getElementById("year").textContent = new Date().getFullYear();
 renderFilterOptions();
 renderBusinesses();
+
+
+/* Business listing application form */
+const submissionForm = document.getElementById("businessSubmissionForm");
+
+if (submissionForm) {
+  const formStatus = document.getElementById("formStatus");
+  const submitButton = submissionForm.querySelector('button[type="submit"]');
+  const submissionFrame = document.querySelector('iframe[name="submissionTarget"]');
+  let submissionInProgress = false;
+
+  if (submissionFrame) {
+    submissionFrame.addEventListener("load", () => {
+      if (!submissionInProgress) return;
+
+      // Apps Script responses load in this hidden frame. Cross-origin browser
+      // rules prevent the page from reading the response body, so the sheet
+      // itself must be checked during the initial end-to-end test.
+      submissionInProgress = false;
+      submissionForm.reset();
+      submitButton.disabled = false;
+      submitButton.innerHTML = 'Submit application <span aria-hidden="true">→</span>';
+      formStatus.textContent = "Your application has been sent. Thank you! We'll review it before adding your business to the directory.";
+      formStatus.className = "form-status form-status-success";
+      formStatus.hidden = false;
+    });
+  }
+
+  submissionForm.addEventListener("submit", event => {
+    if (!submissionForm.reportValidity()) {
+      event.preventDefault();
+      return;
+    }
+
+    const shopLink = submissionForm.elements.shopLink.value.trim();
+    let parsedShopLink;
+
+    try {
+      parsedShopLink = new URL(shopLink);
+    } catch {
+      event.preventDefault();
+      submissionForm.elements.shopLink.setCustomValidity("Please enter a valid shop link, including https://");
+      submissionForm.elements.shopLink.reportValidity();
+      submissionForm.elements.shopLink.setCustomValidity("");
+      return;
+    }
+
+    if (!["https:", "http:"].includes(parsedShopLink.protocol)) {
+      event.preventDefault();
+      submissionForm.elements.shopLink.setCustomValidity("Please use a shop link beginning with https:// or http://");
+      submissionForm.elements.shopLink.reportValidity();
+      submissionForm.elements.shopLink.setCustomValidity("");
+      return;
+    }
+
+    if (submissionInProgress) {
+      event.preventDefault();
+      return;
+    }
+
+    // Native form POST sends the fields to Apps Script without requiring
+    // cross-origin JavaScript access to its response.
+    submissionInProgress = true;
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending application…";
+    formStatus.hidden = true;
+  });
+}

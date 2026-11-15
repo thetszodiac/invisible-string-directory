@@ -76,11 +76,49 @@
     </section>
 
 <section class="join-section" id="get-listed">
-      <h2>There's room<br>on the <em>thread.</em></h2><p>If you own a Swiftie inspired small business and would like to be featured on The Invisible String Directory, please complete a listing form. Listings are free - every small business deserves a chance to be heard.</p></div>
+      <div class="join-copy">
+        <h2>There's room<br>on the <em>thread.</em></h2>
+        <p>If you own a Swiftie-inspired small business and would like to be featured on The Invisible String Directory, please complete the application form. Listings are free — every small business deserves a chance to be heard.</p>
+      </div>
+
       <div class="join-card">
         <svg viewBox="0 0 180 28" aria-hidden="true"><path d="M2 17 C24 -1 38 31 61 14 S103 2 119 15 S153 29 178 9"/></svg>
-        <h3>Listing application form.</h3>
-        <p>Business submissions are coming soon!</p>
+        <h3>Business listing application</h3>
+        <p class="form-intro">Tell us a little about your business. All applications are reviewed before listings are added.</p>
+
+        <iframe name="submissionTarget" title="Submission response" class="submission-frame" hidden></iframe>
+        <form id="businessSubmissionForm" target="submissionTarget"
+          action="https://script.google.com/macros/s/AKfycbzDyRMA7vj1OeX6M_ftaXxAvRF1qNtQ743j7NyMDmV4Q8sgpgP-rC1mCEpDMmSJb1l0/exec"
+          method="post">
+          <label class="form-field">
+            <span>Business name <span aria-hidden="true">*</span></span>
+            <input type="text" name="businessName" autocomplete="organization" required>
+          </label>
+
+          <label class="form-field">
+            <span>Shop link <span aria-hidden="true">*</span></span>
+            <input type="url" name="shopLink" placeholder="https://yourshop.com" inputmode="url" required>
+          </label>
+
+          <label class="form-field">
+            <span>Country <span aria-hidden="true">*</span></span>
+            <input type="text" name="country" autocomplete="country-name" required>
+          </label>
+
+          <label class="form-field">
+            <span>Tell us a little about what you sell <span aria-hidden="true">*</span></span>
+            <textarea name="description" rows="5" required placeholder="The Invisible String Directory is intended for Swiftie-owned and Swiftie-inspired small businesses. Tell us a little about your business, what you sell, and how it connects to the Swiftie community."></textarea>
+          </label>
+
+          <label class="consent-field">
+            <input type="checkbox" name="consent" value="true" required>
+            <span>I confirm that I’m happy for my business to be featured on The Invisible String Directory, and understand that all submissions are reviewed before being added. <span aria-hidden="true">*</span></span>
+          </label>
+
+          <button class="submission-button" type="submit">Submit application <span aria-hidden="true">→</span></button>
+          <p class="form-note">All fields are required. Your details will only be used to review your directory application.</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
+        </form>
       </div>
     </section>
     
