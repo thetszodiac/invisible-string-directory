@@ -25,6 +25,8 @@ const businesses = [
 
   { name: "Oh Snap Bracelets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Bedazzled keychains, phone charms, bracelets, and more! Bedazzled all the things!", url: "https://www.etsy.com/shop/OhSnapBracelets", symbol: "O" },
 
+  { name: "Schoolhouse Sweets.", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Delicious custom cookies alongside Swiftie-inspired keychains and custom painted shoes.", url: "https://schoolhousesweetsandcrafts.square.site/", symbol: "S" },
+
   { name: "Sparta Candle Co.", categories: ["Home & Lifestyle"], country: "USA", description: "Intricately designed soap, candles, and home & body products to serve as functional art and add a little magic to everyday life.", url: "https://spartacandleco.com/", symbol: "S" },
 
 ];
