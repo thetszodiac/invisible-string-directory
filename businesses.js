@@ -1,4 +1,5 @@
-// DEMO DATA ONLY. Replace these fictional examples with approved real listings before launch.
+// DEMO DATA ONLY. These are fictional examples, not real businesses.
+// Replace with real businesses that have agreed to be listed before launch.
 const businesses = [
   { name: "Sunday Studio", category: "Art & Prints", country: "United Kingdom", type: "Swiftie-owned", description: "Illustrated prints and thoughtful paper goods for everyday spaces.", url: "https://example.com", symbol: "S" },
   { name: "Golden Hour Goods", category: "Jewellery & Accessories", country: "United States", type: "Taylor-inspired", description: "Hand-finished accessories with a little sparkle and a lot of personality.", url: "https://example.com", symbol: "G" },
