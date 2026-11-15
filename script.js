@@ -107,23 +107,31 @@ if (submissionForm) {
   const submitButton = submissionForm.querySelector('button[type="submit"]');
   const submissionFrame = document.querySelector('iframe[name="submissionTarget"]');
   let submissionInProgress = false;
+  let submissionTimeout;
 
-  if (submissionFrame) {
-    submissionFrame.addEventListener("load", () => {
-      if (!submissionInProgress) return;
+  // Apps Script sends an explicit result message from the hidden iframe.
+  // Only accept messages from the iframe used by this form.
+  window.addEventListener("message", event => {
+    if (!submissionFrame || event.source !== submissionFrame.contentWindow) return;
+    if (!event.data || event.data.type !== "invisible-string-submission") return;
+    if (!submissionInProgress) return;
 
-      // Apps Script responses load in this hidden frame. Cross-origin browser
-      // rules prevent the page from reading the response body, so the sheet
-      // itself must be checked during the initial end-to-end test.
-      submissionInProgress = false;
+    clearTimeout(submissionTimeout);
+    submissionInProgress = false;
+    submitButton.disabled = false;
+    submitButton.innerHTML = 'Submit application <span aria-hidden="true">→</span>';
+
+    if (event.data.success === true) {
       submissionForm.reset();
-      submitButton.disabled = false;
-      submitButton.innerHTML = 'Submit application <span aria-hidden="true">→</span>';
-      formStatus.textContent = "Your application has been sent. Thank you! We'll review it before adding your business to the directory.";
+      formStatus.textContent = "Thank you! Your application has been received and will be reviewed before your business is added to the directory.";
       formStatus.className = "form-status form-status-success";
-      formStatus.hidden = false;
-    });
-  }
+    } else {
+      formStatus.textContent = event.data.message || "Sorry, we couldn't submit your application. Please try again.";
+      formStatus.className = "form-status form-status-error";
+    }
+
+    formStatus.hidden = false;
+  });
 
   submissionForm.addEventListener("submit", event => {
     if (!submissionForm.reportValidity()) {
@@ -157,11 +165,22 @@ if (submissionForm) {
       return;
     }
 
-    // Native form POST sends the fields to Apps Script without requiring
-    // cross-origin JavaScript access to its response.
     submissionInProgress = true;
     submitButton.disabled = true;
     submitButton.textContent = "Sending application…";
     formStatus.hidden = true;
+
+    // Do not claim success just because the iframe loaded. Wait for the
+    // explicit result message from Apps Script.
+    submissionTimeout = setTimeout(() => {
+      if (!submissionInProgress) return;
+
+      submissionInProgress = false;
+      submitButton.disabled = false;
+      submitButton.innerHTML = 'Submit application <span aria-hidden="true">→</span>';
+      formStatus.textContent = "We couldn't confirm that your application was received. Please check your connection and try again. If you have already submitted, please contact us before sending it again.";
+      formStatus.className = "form-status form-status-error";
+      formStatus.hidden = false;
+    }, 20000);
   });
 }
