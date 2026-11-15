@@ -859,7 +859,7 @@ h2 em {
   }
 
   .discover-section {
-    padding-top: 35px;
+    padding-top: 25px;
   }
 
   .section-heading {
@@ -947,7 +947,7 @@ h2 em {
 
   /* Keep the spotlight card below its heading on small screens. */
   .hero-art {
-    height: 520px;
+    height: 490px;
   }
 
   .spotlight-heading h2 {
