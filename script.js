@@ -178,7 +178,7 @@ if (submissionForm) {
       submissionInProgress = false;
       submitButton.disabled = false;
       submitButton.innerHTML = 'Submit application <span aria-hidden="true">→</span>';
-      formStatus.textContent = "We couldn't confirm that your application was received. Please check your connection and try again. If you have already submitted, please contact us before sending it again.";
+      formStatus.textContent = "We couldn't confirm that your application was received. Please check your connection and try again.";
       formStatus.className = "form-status form-status-error";
       formStatus.hidden = false;
     }, 20000);
