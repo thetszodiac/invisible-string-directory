@@ -1,14 +1,14 @@
 const grid = document.getElementById("businessGrid");
 const searchInput = document.getElementById("searchInput");
-const categoryFilter = document.getElementById("categoryFilter");
-const countryFilter = document.getElementById("countryFilter");
 const resultCount = document.getElementById("resultCount");
 const emptyState = document.getElementById("emptyState");
 
-const categories = [...new Set(businesses.map(item => item.category))].sort();
-const countries = [...new Set(businesses.map(item => item.country))].sort();
-categories.forEach(value => categoryFilter.add(new Option(value, value)));
-countries.forEach(value => countryFilter.add(new Option(value, value)));
+const filterGroups = {
+  categories: { element: document.getElementById("categoryOptions"), values: [...new Set(businesses.flatMap(item => item.categories))].sort() },
+  countries: { element: document.getElementById("countryOptions"), values: [...new Set(businesses.map(item => item.country))].sort() },
+  types: { element: document.getElementById("typeOptions"), values: ["Swiftie-owned", "Taylor-inspired"] }
+};
+const selected = { categories: new Set(), countries: new Set(), types: new Set() };
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, char => ({
@@ -21,34 +21,63 @@ function safeUrl(value) {
     return ["https:", "http:"].includes(url.protocol) ? url.href : "#";
   } catch { return "#"; }
 }
+function renderFilterOptions() {
+  for (const [groupName, group] of Object.entries(filterGroups)) {
+    group.element.innerHTML = group.values.map((value, index) => {
+      const id = `${groupName}-${index}`;
+      return `<label class="filter-option" for="${id}">
+        <input id="${id}" type="checkbox" data-group="${groupName}" value="${escapeHtml(value)}">
+        <span>${escapeHtml(value)}</span>
+      </label>`;
+    }).join("");
+  }
+}
+function updateFilterSummary() {
+  const total = Object.values(selected).reduce((sum, set) => sum + set.size, 0);
+  document.getElementById("activeFilterCount").textContent = total ? `${total} filter${total === 1 ? "" : "s"} selected` : "No filters selected";
+}
 function renderBusinesses() {
   const term = searchInput.value.trim().toLowerCase();
-  const category = categoryFilter.value;
-  const country = countryFilter.value;
   const matches = businesses.filter(item => {
-    const haystack = [item.name, item.category, item.country, item.type, item.description].join(" ").toLowerCase();
-    return haystack.includes(term) && (!category || item.category === category) && (!country || item.country === country);
+    const haystack = [item.name, item.categories.join(" "), item.country, item.type.join(" "), item.description].join(" ").toLowerCase();
+    const matchesSearch = haystack.includes(term);
+    // OR within each filter group; AND between groups.
+    const matchesCategory = !selected.categories.size || item.categories.some(value => selected.categories.has(value));
+    const matchesCountry = !selected.countries.size || selected.countries.has(item.country);
+    const matchesType = !selected.types.size || item.type.some(value => selected.types.has(value));
+    return matchesSearch && matchesCategory && matchesCountry && matchesType;
   });
+
   grid.innerHTML = matches.map(item => `
     <article class="business-card">
-      <div class="card-top"><span class="card-symbol">${escapeHtml(item.symbol)}</span><span class="card-type">${escapeHtml(item.type)}</span></div>
-      <h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.description)}</p>
-      <div class="card-bottom"><span>${escapeHtml(item.category)} · ${escapeHtml(item.country)}</span><a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">Visit shop ↗</a></div>
+      <div class="card-top"><span class="card-symbol">${escapeHtml(item.symbol)}</span><span class="card-type">${escapeHtml(item.type.join(" · "))}</span></div>
+      <h3>${escapeHtml(item.name)}</h3>
+      <p>${escapeHtml(item.description)}</p>
+      <div class="card-tags">${item.categories.map(category => `<span>${escapeHtml(category)}</span>`).join("")}</div>
+      <div class="card-bottom"><span>${escapeHtml(item.country)}</span><a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">Visit shop ↗</a></div>
     </article>`).join("");
+
   resultCount.textContent = `${matches.length} ${matches.length === 1 ? "business" : "businesses"} found`;
   emptyState.hidden = matches.length > 0;
+  updateFilterSummary();
 }
-[searchInput, categoryFilter, countryFilter].forEach(el => el.addEventListener("input", renderBusinesses));
-
-document.getElementById("categoryLinks").innerHTML = categories.map(category =>
-  `<button class="category-link" type="button" data-category="${escapeHtml(category)}">${escapeHtml(category)} <span>↗</span></button>`
-).join("");
-document.getElementById("categoryLinks").addEventListener("click", event => {
-  const button = event.target.closest("button[data-category]");
-  if (!button) return;
-  categoryFilter.value = button.dataset.category;
+Object.entries(filterGroups).forEach(([groupName, group]) => {
+  group.element.addEventListener("change", event => {
+    const input = event.target;
+    if (input.matches('input[type="checkbox"]')) {
+      if (input.checked) selected[groupName].add(input.value);
+      else selected[groupName].delete(input.value);
+      renderBusinesses();
+    }
+  });
+});
+searchInput.addEventListener("input", renderBusinesses);
+document.getElementById("clearFilters").addEventListener("click", () => {
+  Object.values(selected).forEach(set => set.clear());
+  document.querySelectorAll(".filter-option input").forEach(input => { input.checked = false; });
+  searchInput.value = "";
   renderBusinesses();
-  document.getElementById("discover").scrollIntoView({behavior:"smooth"});
 });
 document.getElementById("year").textContent = new Date().getFullYear();
+renderFilterOptions();
 renderBusinesses();

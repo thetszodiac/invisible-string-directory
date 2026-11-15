@@ -65,8 +65,19 @@
       </div>
       <div class="filters">
         <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search businesses</span><input id="searchInput" type="search" placeholder="Search businesses, products or places…"></label>
-        <label class="select-box"><span class="sr-only">Filter by category</span><select id="categoryFilter"><option value="">All categories</option></select></label>
-        <label class="select-box"><span class="sr-only">Filter by country</span><select id="countryFilter"><option value="">All locations</option></select></label>
+        <details class="filter-panel" open>
+          <summary>Categories <span class="filter-hint">Select any that apply</span></summary>
+          <div class="filter-options" id="categoryOptions"></div>
+        </details>
+        <details class="filter-panel">
+          <summary>Country <span class="filter-hint">Select any that apply</span></summary>
+          <div class="filter-options" id="countryOptions"></div>
+        </details>
+        <details class="filter-panel">
+          <summary>Business type <span class="filter-hint">Select any that apply</span></summary>
+          <div class="filter-options" id="typeOptions"></div>
+        </details>
+        <div class="filter-actions"><span id="activeFilterCount">No filters selected</span><button id="clearFilters" type="button">Clear all</button></div>
       </div>
       <div class="result-row"><span id="resultCount">Discover independent businesses</span><span class="demo-label">Illustrative demo listings</span></div>
       <div class="business-grid" id="businessGrid" aria-live="polite"></div>
@@ -78,11 +89,6 @@
       <div><p class="eyebrow">A SHARED LOVE OF CREATIVITY</p><h2>Different places.<br><em>One shared connection.</em></h2></div>
       <p>Some businesses are owned by Swifties. Others are inspired by Taylor's music and creative universe. All are independent, all have a story, and all deserve to be discovered.</p>
       <svg class="story-thread" viewBox="0 0 300 50" aria-hidden="true"><path d="M2 25 C35 -2 58 54 91 24 S147 1 173 25 S236 52 298 15"/></svg>
-    </section>
-
-    <section class="section category-section">
-      <div class="section-heading"><div><p class="eyebrow">FOLLOW YOUR CURIOSITY</p><h2>Find your kind<br>of <em>something.</em></h2></div></div>
-      <div class="category-grid" id="categoryLinks"></div>
     </section>
 
     <section class="join-section" id="get-listed">
