@@ -339,7 +339,7 @@ h2 em {
 .spotlight-card {
   position: absolute;
   z-index: 2;
-  top: 22%;
+  top: 20%;
   left: 20%;
   display: flex;
   width: 66%;
@@ -831,7 +831,7 @@ h2 em {
   }
 
   .spotlight-card {
-    top: 26%;
+    top: 24%;
     height: 66%;
     z-index: 2;
   }
@@ -957,7 +957,7 @@ h2 em {
 
   .spotlight-card {
     gap: 10px;
-    top: 26%;
+    top: 20%;
     height: 66%;
   }
 
