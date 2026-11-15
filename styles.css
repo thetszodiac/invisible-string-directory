@@ -1,244 +1,353 @@
- :root {
-  --linen:#F6F2EA; --paper:#FCFAF6; --oat:#E6DED1; --taupe:#B5A28D;
-  --walnut:#796858; --gold:#B69A65; --ink:#453D36; --muted:#83796F; --line:#E7E0D6;
-  --serif:"Playfair Display", Georgia, serif; --sans:"DM Sans", Arial, sans-serif;
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;background:var(--linen);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.site-header{min-height:100px;padding:13px 6.5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:24px}
-.brand{position:relative;display:flex;flex-direction:column;align-items:center;min-width:210px}
-.brand-thread{width:105px;height:16px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round}
-.brand-name{font:500 23px var(--serif);color:var(--walnut);letter-spacing:-.6px}
-.brand-descriptor{font-size:8px;color:#9B876C;margin-top:5px}
-.site-header nav{display:flex;gap:32px;font-size:12px;color:#71675D}
-.site-header nav a:hover,.quiet-link:hover{color:var(--walnut)}
-.header-link{font-size:11px;font-weight:700;border-bottom:1px solid var(--gold);padding-bottom:7px}
-.header-link span{color:var(--gold);margin-left:8px}
-.hero{min-height:590px;padding:75px 9% 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:6%;align-items:center;overflow:hidden}
-.eyebrow{font-size:9px;font-weight:700;letter-spacing:1.8px;color:var(--walnut);margin:0 0 20px}
-.tiny-star{color:var(--gold);font-size:13px;margin-right:6px}
-h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:-1.6px}
-h1{font-size:clamp(47px,5.5vw,73px);line-height:1.08;margin:0 0 24px}
-h1 em,h2 em{color:var(--walnut);font-weight:500}
-.hero-intro{font-size:14px;line-height:1.9;color:var(--muted);max-width:470px}
-.hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:30px}
-.button{display:inline-flex;align-items:center;gap:22px;padding:15px 19px;font-size:11px;font-weight:700}
-.button-primary{background:var(--walnut);color:#fff;border:1px solid var(--walnut)}
-.button-primary:hover{background:#625346;border-color:#625346}
-.quiet-link{font-size:11px;font-weight:600;border-bottom:1px solid var(--oat);padding-bottom:5px}
-.handwritten{font:italic 15px var(--serif);color:#9B876C;margin-top:34px}
-.hero-art{height:410px;position:relative;max-width:470px;width:100%;justify-self:end}
-.paper{position:absolute;box-shadow:0 18px 45px #49332a10;border:1px solid #79685812}
-.paper-back{width:66%;height:77%;top:10%;left:12%;background:#E6DED1;transform:rotate(-8deg)}
-.paper-front{width:66%;height:77%;top:12%;left:20%;background:#FCFAF6;transform:rotate(5deg);padding:30px;display:flex;flex-direction:column;justify-content:space-between}
-.paper-kicker,.paper-bottom{font-size:8px;letter-spacing:1.5px;color:#8B7B69}
-.paper-script{font:italic 43px/1.12 var(--serif);color:var(--walnut)}
-.hero-thread{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:2}
-.hero-thread path{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round}
-.hero-star{position:absolute;right:5%;top:7%;font-size:34px;color:var(--gold);z-index:3}
-.values-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:23px 9%;display:flex;justify-content:space-between;gap:16px;font-size:10px;color:#71675D}
-.values-strip i{font-style:normal;color:var(--gold);font-size:9px;margin-right:10px}
-.section{padding:95px 9%}
-.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
-h2{font-size:clamp(38px,4vw,53px);line-height:1.12;margin:0}
-.section-heading>p{max-width:330px;color:var(--muted);font-size:12px;line-height:1.9;margin:0 0 4px}
-.filters{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start}
-.search-box{grid-column:1/-1;min-height:49px;background:var(--paper);border:1px solid var(--line);border-radius:2px;display:flex;align-items:center;padding:0 14px;gap:10px;color:var(--gold);font-size:24px}
-.search-box input{border:0;outline:0;background:transparent;width:100%;font:12px var(--sans);color:var(--ink)}
-.filter-panel{background:var(--paper);border:1px solid var(--line);min-width:0;border-radius:2px}
-.filter-panel summary{list-style:none;cursor:pointer;padding:15px 14px;font-size:11px;font-weight:700;color:var(--walnut);display:flex;justify-content:space-between;gap:8px}
-.filter-panel summary::-webkit-details-marker{display:none}
-.filter-panel summary:after{content:"＋";color:var(--gold)}
-.filter-panel[open] summary:after{content:"−"}
-.filter-hint{font-size:9px;font-weight:400;color:var(--muted)}
-.filter-options{padding:0 14px 14px;display:grid;gap:9px;max-height:190px;overflow:auto}
-.filter-option{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--ink);cursor:pointer}
-.filter-option input{accent-color:var(--walnut);width:14px;height:14px}
-.filter-actions{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:10px;padding:2px 1px}
-.filter-actions button{border:0;background:none;color:var(--walnut);font:700 10px var(--sans);cursor:pointer;padding:5px}
-.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 14px}
-.card-tags span{font-size:8px;color:var(--walnut);background:#EFE9DF;padding:5px 7px;border-radius:20px}
-.result-row{display:flex;justify-content:space-between;margin:19px 0 15px;color:var(--muted);font-size:10px}
-.demo-label{color:var(--walnut);font-size:9px}
-.business-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.business-card{background:var(--paper);border:1px solid var(--line);padding:22px;min-height:240px;display:flex;flex-direction:column;transition:.2s}
-.business-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #49332a0d}
-.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}
-.card-symbol{width:38px;height:38px;border-radius:50%;background:var(--oat);display:grid;place-items:center;color:var(--walnut);font:italic 19px var(--serif)}
+/* =========================================================
+   THE INVISIBLE STRING DIRECTORY
+   Main stylesheet
+   ========================================================= */
 
-.business-card h3{font:500 22px var(--serif);margin:0 0 8px}
-.business-card p{font-size:11px;line-height:1.7;color:var(--muted);margin:0 0 16px}
-.card-bottom{display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:12px;margin-top:auto;font-size:9px;color:var(--muted)}
-.card-bottom a{color:var(--walnut);font-weight:700;white-space:nowrap}
-.empty-state{text-align:center;padding:40px;color:var(--muted);font-size:13px}
-.category-section{padding-top:90px;padding-bottom:90px}
-.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.category-link{border:1px solid var(--line);background:var(--paper);padding:20px 16px;display:flex;justify-content:space-between;align-items:center;text-align:left;font:17px var(--serif);color:var(--ink);cursor:pointer}
-.category-link span{color:var(--gold);font:14px var(--sans)}
-.category-link:hover{background:#EFE9DF}
-.join-section{background:var(--walnut);color:white;padding:75px 11%;display:grid;grid-template-columns:1fr .9fr;gap:9%;align-items:center}
-.join-section .eyebrow{color:#E8DFD2}
-.join-section h2{font-size:52px;margin-bottom:17px}
-.join-section h2 em{color:#D9C59F}
-.join-section>div:first-child>p:last-child{font-size:12px;line-height:1.9;color:#EAE2D8;max-width:390px}
-.join-card{background:var(--paper);color:var(--ink);padding:30px}
-.join-card svg{width:150px;height:25px;fill:none;stroke:var(--gold);stroke-width:1.5}
-.join-card h3{font:23px var(--serif);margin:15px 0 10px}
-.join-card p{font-size:11px;line-height:1.8;color:var(--muted)}
-.button-light{background:var(--walnut);color:white;border:1px solid var(--walnut)}
-.site-footer{padding:32px 6.5%;display:grid;grid-template-columns:1fr 2fr 1fr;gap:20px;align-items:center}
-.footer-brand{align-items:flex-start;min-width:0}
-.footer-brand .brand-name{font-size:19px}
-.footer-brand .brand-descriptor{margin-left:4px}
-.site-footer p,.site-footer>span{font-size:9px;line-height:1.8;color:var(--muted);margin:0}
-.site-footer>span{text-align:right}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:800px){
- .site-header{padding:12px 5%;flex-wrap:wrap}.site-header nav{gap:16px}.header-link{display:none}
- .hero{padding:58px 7%;grid-template-columns:1fr;gap:22px}.hero-art{justify-self:center;height:340px;max-width:390px}
- .values-strip{padding:20px 7%;flex-wrap:wrap}.section{padding:75px 7%}
- .section-heading{display:block}.section-heading>p{margin-top:17px}
- .filters{grid-template-columns:1fr 1fr}.search-box{grid-column:1/-1}.filter-panel:last-of-type{grid-column:1/-1}
- .business-grid{grid-template-columns:repeat(2,1fr)}
- .category-grid{grid-template-columns:repeat(2,1fr)}
- .join-section{padding:62px 8%;grid-template-columns:1fr;gap:25px}
- .site-footer{grid-template-columns:1fr 1fr}.site-footer p{grid-column:1/-1;grid-row:2}.site-footer>span{text-align:right}
-}
-@media(max-width:480px){
- .brand{min-width:0}.brand-name{font-size:20px}.site-header nav{font-size:10px;gap:12px}
- h1{font-size:48px}.hero{padding-top:48px}.hero-art{height:290px}
- .paper-script{font-size:35px}.paper-front{padding:20px}
- .values-strip{font-size:9px}.filters{grid-template-columns:1fr}.search-box{grid-column:auto}.filter-panel:last-of-type{grid-column:auto}
- .business-grid{grid-template-columns:1fr}.result-row{flex-direction:column;gap:8px}
- .category-grid{grid-template-columns:1fr 1fr}.category-link{font-size:14px;padding:15px 11px}
- .join-section h2{font-size:45px}.site-footer{grid-template-columns:1fr}.site-footer p{grid-column:auto;grid-row:auto}.site-footer>span{text-align:left}
+/* 1. Brand tokens */
+:root {
+  --linen: #F6F2EA;
+  --paper: #FCFAF6;
+  --oat: #E6DED1;
+  --taupe: #B5A28D;
+  --walnut: #796858;
+  --gold: #B69A65;
+  --ink: #453D36;
+  --muted: #83796F;
+  --line: #E7E0D6;
+
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
 }
 
-/* Quiet editorial refinements */
-.site-header{background:var(--paper)}
-.brand-descriptor{letter-spacing:2.2px;color:var(--taupe)}
-.eyebrow{color:var(--walnut)}
-.hero{background:var(--linen)}
-.values-strip{background:var(--paper)}
-.filter-panel summary{color:var(--walnut)}
-.filter-option input{accent-color:var(--walnut)}
-.card-tags span{color:var(--walnut);background:#EFE9DF}
-.card-symbol{color:var(--walnut)}
-.join-section{background:#796858}
-.site-footer{background:var(--paper);border-top:1px solid var(--line)}
-button,a,input{ -webkit-tap-highlight-color:transparent }
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+/* 2. Base and shared elements */
+* {
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  margin: 0;
+  background: var(--linen);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-/* Full-width Invisible String logo */
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  color: var(--walnut);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.tiny-star {
+  margin-right: 6px;
+  color: var(--gold);
+  font-size: 13px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 15px 19px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.button-primary,
+.button-light {
+  border: 1px solid var(--walnut);
+  background: var(--walnut);
+  color: #fff;
+}
+
+.button-primary:hover {
+  border-color: #625346;
+  background: #625346;
+}
+
+.quiet-link {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--oat);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.quiet-link:hover {
+  color: var(--walnut);
+}
+
+/* 3. Typography
+   Keep all h1 and h2 sizing here so heading hierarchy is easy to maintain. */
+h1,
+h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -1.2px;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: clamp(38px, 4.5vw, 60px);
+  line-height: 1.12;
+}
+
+h2 {
+  font-size: clamp(24px, 3.5vw, 46px);
+  line-height: 1.15;
+}
+
+h1 em,
+h2 em {
+  color: var(--walnut);
+  font-weight: 500;
+}
+
+.business-card h3 {
+  margin: 0 0 8px;
+  font: 500 24px var(--serif);
+}
+
+.join-card h3 {
+  margin: 15px 0 10px;
+  font: 23px var(--serif);
+}
+
+.hero-intro {
+  max-width: 470px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.handwritten {
+  margin-top: 34px;
+  color: #9B876C;
+  font: italic 15px var(--serif);
+}
+
+/* 4. Header and main logo */
 .site-header {
-  display: block !important;
+  display: block;
   width: 100%;
   min-height: 0;
   padding: 20px 2.5%;
-  background: var(--paper);
   border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.brand {
+  position: relative;
+  display: flex;
+  min-width: 210px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .site-header > .brand {
-  display: block !important;
-  width: 100% !important;
-  max-width: none !important;
-  min-width: 0 !important;
+  display: block;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
   margin: 0 auto;
   padding: 0;
 }
 
 .site-header > .brand > .brand-logo {
   display: block;
-  width: 100% !important;
-  max-width: none !important;
-  height: auto !important;
+  width: 100%;
+  max-width: none;
+  height: auto;
   margin: 0 auto;
   object-fit: contain;
 }
 
-@media (max-width: 480px) {
-  .site-header {
-    padding: 12px 2%;
-  }
+.brand-thread {
+  width: 105px;
+  height: 16px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-linecap: round;
 }
 
-
-/* Typography and footer logo refinements */
-
-/* Main homepage heading */
-h1 {
-  font-size: clamp(38px, 4.5vw, 60px);
-  line-height: 1.12;
-  letter-spacing: -1.2px;
+.brand-name {
+  color: var(--walnut);
+  font: 500 23px var(--serif);
+  letter-spacing: -.6px;
 }
 
-/* Directory section headings */
-h2 {
-  font-size: clamp(32px, 3.5vw, 46px);
-  line-height: 1.15;
-  letter-spacing: -1px;
+.brand-descriptor {
+  margin-top: 5px;
+  color: var(--taupe);
+  font-size: 8px;
+  letter-spacing: 2.2px;
 }
 
-/* Get listed section heading */
-.join-section h2 {
-  font-size: clamp(34px, 4vw, 46px);
+.site-header nav {
+  display: flex;
+  gap: 32px;
+  color: #71675D;
+  font-size: 12px;
 }
 
-/* Keep footer logo compact */
-.site-footer .footer-brand {
-  display: block;
-  width: 150px;
-  max-width: 150px;
-  min-width: 0;
-  justify-self: start;
-  flex: none;
+.site-header nav a:hover {
+  color: var(--walnut);
 }
 
-.site-footer .footer-brand .brand-logo {
-  display: block;
+.header-link {
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.header-link span {
+  margin-left: 8px;
+  color: var(--gold);
+}
+
+/* 5. Hero and business spotlight */
+.hero {
+  display: grid;
+  min-height: 590px;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 6%;
+  overflow: hidden;
+  padding: 75px 9% 70px;
+  background: var(--linen);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.hero-art {
+  position: relative;
+  justify-self: end;
   width: 100%;
-  max-width: 150px;
-  height: auto;
+  max-width: 470px;
+  height: 520px;
 }
 
-/* Mobile adjustments */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 28px;
-    line-height: 1.13;
-  }
-
-  h2 {
-    font-size: 24px;
-    line-height: 1.15;
-  }
-
-  .join-section h2 {
-    font-size: 36px;
-  }
-
-  .site-footer .footer-brand {
-    width: 125px;
-    max-width: 125px;
-  }
-
-  .site-footer .footer-brand .brand-logo {
-    max-width: 125px;
-  }
-}
-
-
-/* Business spotlight card: photo area and decorative thread kept separate */
-.spotlight-card {
-  gap: 14px;
-  justify-content: flex-start;
-  overflow: visible;
+.paper {
   position: absolute;
+  border: 1px solid #79685812;
+  box-shadow: 0 18px 45px #49332a10;
+}
+
+.paper-back {
+  top: 20%;
+  left: 12%;
+  width: 66%;
+  height: 70%;
+  transform: rotate(-8deg);
+  background: var(--oat);
+}
+
+.paper-front {
+  top: 12%;
+  left: 20%;
+  display: flex;
+  width: 66%;
+  height: 77%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  transform: rotate(5deg);
+  background: var(--paper);
+}
+
+.paper-kicker,
+.paper-bottom {
+  color: #8B7B69;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.paper-script {
+  color: var(--walnut);
+  font: italic 43px/1.12 var(--serif);
+}
+
+.hero-thread {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hero-thread path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.hero-star {
+  position: absolute;
+  z-index: 3;
+  top: 7%;
+  right: 5%;
+  color: var(--gold);
+  font-size: 34px;
+}
+
+/* Spotlight heading sits above the card */
+.spotlight-heading {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.spotlight-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.spotlight-card {
+  position: absolute;
+  z-index: 2;
+  top: 22%;
+  left: 20%;
+  display: flex;
+  width: 66%;
+  height: 70%;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+  overflow: visible;
 }
 
 .spotlight-card .paper-kicker,
@@ -250,28 +359,26 @@ h2 {
 .spotlight-photo {
   position: relative;
   z-index: 1;
-  flex: 1 1 auto;
+  display: grid;
   width: 100%;
   min-height: 105px;
   max-height: 190px;
-  display: grid;
+  flex: 1 1 auto;
   place-items: center;
   overflow: hidden;
-  background: linear-gradient(145deg, #E6DED1, #F6F2EA 58%, #DCD0BF);
   border: 1px solid #79685818;
+  background: linear-gradient(145deg, #E6DED1, #F6F2EA 58%, #DCD0BF);
 }
 
 .spotlight-photo span {
+  padding: 12px;
   color: var(--walnut);
   font: italic 15px var(--serif);
   opacity: .75;
   text-align: center;
-  padding: 12px;
 }
 
-/* When adding a real image, use:
-   <img class="spotlight-photo-image" src="spotlight-photo.jpg" alt="Description">
-*/
+/* Use this class for a real featured-business image. */
 .spotlight-photo-image {
   display: block;
   width: 100%;
@@ -283,12 +390,12 @@ h2 {
 
 .spotlight-thread {
   position: absolute;
-  left: -4%;
+  z-index: 1;
   bottom: 1%;
+  left: -4%;
   width: 108%;
   height: 25%;
   overflow: visible;
-  z-index: 1;
   pointer-events: none;
 }
 
@@ -303,162 +410,424 @@ h2 {
   padding-bottom: 13px;
 }
 
-@media (max-width: 800px) {
-  .spotlight-photo {
-    min-height: 90px;
-  }
+/* 6. Values strip */
+.values-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 23px 9%;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  color: #71675D;
+  font-size: 10px;
 }
 
-@media (max-width: 480px) {
-  .spotlight-card {
-    gap: 10px;
-  }
-
-  .spotlight-photo {
-    min-height: 78px;
-  }
-
-  .spotlight-photo span {
-    font-size: 12px;
-  }
-
-  .spotlight-thread {
-    height: 23%;
-    bottom: 1%;
-  }
-
-  .spotlight-card .paper-bottom {
-    padding-bottom: 10px;
-  }
+.values-strip i {
+  margin-right: 10px;
+  color: var(--gold);
+  font-size: 9px;
+  font-style: normal;
 }
 
-
-/* Readability refinement: increase everyday interface and listing text */
-.hero-intro { font-size: 16px; }
-.section-heading > p { font-size: 14px; }
-.search-box input { font-size: 14px; }
-.filter-panel summary { font-size: 14px; }
-.filter-hint { font-size: 11px; }
-.filter-option { font-size: 13px; line-height: 1.5; }
-.filter-actions, .filter-actions button { font-size: 12px; }
-.result-row { font-size: 12px; }
-.demo-label { font-size: 11px; }
-.business-card h3 { font-size: 24px; }
-.business-card p { font-size: 14px; line-height: 1.75; }
-.card-tags span { font-size: 10px; padding: 6px 9px; }
-.card-bottom { font-size: 11px; }
-.button, .quiet-link { font-size: 13px; }
-.join-section > div:first-child > p:last-child { font-size: 14px; line-height: 1.85; }
-.join-card p { font-size: 13px; line-height: 1.8; }
-.site-footer p, .site-footer > span { font-size: 10px; line-height: 1.8; }
-
-@media (max-width: 480px) {
-  .hero-intro, .section-heading > p { font-size: 14px; }
-  .filter-panel summary { font-size: 14px; }
-  .filter-hint { font-size: 10px; }
-  .filter-option { font-size: 14px; }
-  .business-card h3 { font-size: 23px; }
-  .business-card p { font-size: 14px; }
-  .card-tags span { font-size: 10px; }
-  .card-bottom { font-size: 11px; }
-  .button, .quiet-link { font-size: 13px; }
+/* 7. Directory and shared sections */
+.section {
+  padding: 95px 9%;
 }
 
-
-/* Reduce space between Business Spotlight and Directory */
-@media (max-width: 480px) {
-  .hero {
-    min-height: 0;
-    padding-bottom: 20px;
-  }
-
-  .hero-art {
-    height: 250px;
-  }
-
-  .discover-section {
-    padding-top: 35px;
-  }
+.discover-section {
+  padding-top: 95px;
 }
 
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 34px;
+}
 
-/* Business Spotlight heading */
-.spotlight-heading {
-  position: absolute;
-  top: -65px;
-  left: 0;
+.section-heading > p {
+  max-width: 330px;
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* 8. Search and filters */
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  gap: 10px;
+}
+
+.search-box {
+  display: flex;
+  min-height: 49px;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--gold);
+  font-size: 24px;
+}
+
+.search-box input {
   width: 100%;
-  z-index: 4;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 14px var(--sans);
 }
 
-.spotlight-heading .eyebrow {
-  margin-bottom: 12px;
+.filter-panel {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--paper);
 }
 
-.spotlight-heading h2 {
-  font-size: clamp(25px, 2.8vw, 36px);
-  line-height: 1.2;
+.filter-panel summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 15px 14px;
+  color: var(--walnut);
+  font-size: 14px;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+
+.filter-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-panel summary::after {
+  color: var(--gold);
+  content: "＋";
+}
+
+.filter-panel[open] summary::after {
+  content: "−";
+}
+
+.filter-hint {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.filter-options {
+  display: grid;
+  max-height: 190px;
+  gap: 9px;
+  overflow: auto;
+  padding: 0 14px 14px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.filter-option input {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--walnut);
+}
+
+.filter-actions {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 1px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.filter-actions button {
+  padding: 5px;
+  border: 0;
+  background: none;
+  color: var(--walnut);
+  font: 700 12px var(--sans);
+  cursor: pointer;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 19px 0 15px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.demo-label {
+  color: var(--walnut);
+  font-size: 11px;
+}
+
+/* 9. Business listing cards */
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.business-card {
+  display: flex;
+  min-height: 240px;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  transition: .2s;
+}
+
+.business-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #49332a0d;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.card-symbol {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--oat);
+  color: var(--walnut);
+  font: italic 19px var(--serif);
+}
+
+.business-card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0 0 14px;
+}
+
+.card-tags span {
+  padding: 6px 9px;
+  border-radius: 20px;
+  background: #EFE9DF;
+  color: var(--walnut);
+  font-size: 10px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.card-bottom a {
+  color: var(--walnut);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.empty-state {
+  padding: 40px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* 10. Category section */
+.category-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px var(--serif);
+  text-align: left;
+  cursor: pointer;
+}
+
+.category-link span {
+  color: var(--gold);
+  font: 14px var(--sans);
+}
+
+.category-link:hover {
+  background: #EFE9DF;
+}
+
+/* 11. Get listed section */
+.join-section {
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  align-items: center;
+  gap: 9%;
+  padding: 75px 11%;
+  background: var(--walnut);
+  color: #fff;
+}
+
+.join-section .eyebrow {
+  color: #E8DFD2;
+}
+
+.join-section h2 em {
+  color: #D9C59F;
+}
+
+.join-section > div:first-child > p:last-child {
+  max-width: 390px;
+  color: #EAE2D8;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.join-card {
+  padding: 30px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.join-card svg {
+  width: 150px;
+  height: 25px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+}
+
+.join-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* 12. Footer */
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 6.5%;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.footer-brand {
+  display: block;
+  width: 150px;
+  max-width: 150px;
+  min-width: 0;
+  justify-self: start;
+  flex: none;
+}
+
+.footer-brand .brand-logo {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+
+.site-footer p,
+.site-footer > span {
   margin: 0;
-  letter-spacing: -1px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
 }
 
-/* Make room for the heading above the feature card */
-.hero-art {
-  height: 500px;
+.site-footer > span {
+  text-align: right;
 }
 
-.spotlight-card {
-  top: 22%;
-  height: 70%;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.paper-back {
-  top: 20%;
-  height: 70%;
-}
-
+/* 13. Tablet layout */
 @media (max-width: 800px) {
+  .site-header {
+    padding: 12px 2%;
+  }
+
+  .site-header nav {
+    gap: 16px;
+  }
+
+  .header-link {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 58px 7% 20px;
+  }
+
   .hero-art {
-    height: 420px;
-  }
-
-  .spotlight-heading {
-    top: 0;
-  }
-
-  .spotlight-heading h2 {
-    font-size: 29px;
-  }
-
-  .spotlight-card {
-    top: 25%;
-    height: 70%;
-  }
-
-  .paper-back {
-    top: 23%;
-    height: 70%;
-  }
-}
-
-
-/* Fix spacing between Spotlight heading and card */
-@media (max-width: 800px) {
-  .hero-art {
+    justify-self: center;
+    max-width: 390px;
     height: 520px;
   }
 
   .spotlight-heading {
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 5;
-  }
-
-  .spotlight-heading h2 {
-    font-size: 24px;
-    line-height: 1.2;
-    max-width: 95%;
+    width: 100%;
   }
 
   .spotlight-card {
@@ -471,5 +840,220 @@ h2 {
     top: 44%;
     height: 55%;
   }
+
+  .spotlight-photo {
+    min-height: 90px;
+  }
+
+  .spotlight-heading h2 {
+    max-width: 95%;
+  }
+
+  .values-strip {
+    flex-wrap: wrap;
+    padding: 20px 7%;
+  }
+
+  .section {
+    padding: 75px 7%;
+  }
+
+  .discover-section {
+    padding-top: 35px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading > p {
+    margin-top: 17px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search-box,
+  .filter-actions {
+    grid-column: 1 / -1;
+  }
+
+  .filter-panel:last-of-type {
+    grid-column: 1 / -1;
+  }
+
+  .business-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .join-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 62px 8%;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .site-footer > span {
+    text-align: right;
+  }
 }
 
+/* 14. Mobile layout */
+@media (max-width: 480px) {
+  .site-header {
+    padding: 12px 2%;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .site-header nav {
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.13;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .hero {
+    padding-top: 48px;
+    padding-bottom: 20px;
+  }
+
+  /* Keep the spotlight card below its heading on small screens. */
+  .hero-art {
+    height: 520px;
+  }
+
+  .spotlight-heading h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .spotlight-card {
+    gap: 10px;
+    top: 46%;
+    height: 51%;
+  }
+
+  .paper-back {
+    top: 44%;
+    height: 55%;
+  }
+
+  .paper-script {
+    font-size: 35px;
+  }
+
+  .paper-front {
+    padding: 20px;
+  }
+
+  .spotlight-photo {
+    min-height: 78px;
+  }
+
+  .spotlight-photo span {
+    font-size: 12px;
+  }
+
+  .spotlight-thread {
+    bottom: 1%;
+    height: 23%;
+  }
+
+  .spotlight-card .paper-bottom {
+    padding-bottom: 10px;
+  }
+
+  .values-strip {
+    font-size: 9px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box,
+  .filter-panel:last-of-type,
+  .filter-actions {
+    grid-column: auto;
+  }
+
+  .filter-hint {
+    font-size: 10px;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-card h3 {
+    font-size: 23px;
+  }
+
+  .result-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-link {
+    padding: 15px 11px;
+    font-size: 14px;
+  }
+
+  .join-section {
+    padding: 62px 8%;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    width: 125px;
+    max-width: 125px;
+  }
+
+  .footer-brand .brand-logo {
+    max-width: 125px;
+  }
+
+  .site-footer p {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .site-footer > span {
+    text-align: left;
+  }
+}
