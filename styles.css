@@ -813,7 +813,7 @@ h2 em {
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 42px;
     padding: 58px 7% 20px;
   }
 
@@ -831,14 +831,14 @@ h2 em {
   }
 
   .spotlight-card {
-    top: 46%;
-    height: 51%;
+    top: 31%;
+    height: 66%;
     z-index: 2;
   }
 
   .paper-back {
-    top: 44%;
-    height: 55%;
+    top: 29%;
+    height: 66%;
   }
 
   .spotlight-photo {
@@ -957,13 +957,13 @@ h2 em {
 
   .spotlight-card {
     gap: 10px;
-    top: 46%;
-    height: 51%;
+    top: 31%;
+    height: 66%;
   }
 
   .paper-back {
-    top: 44%;
-    height: 55%;
+    top: 29%;
+    height: 66%;
   }
 
   .paper-script {
