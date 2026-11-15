@@ -5,10 +5,9 @@ const emptyState = document.getElementById("emptyState");
 
 const filterGroups = {
   categories: { element: document.getElementById("categoryOptions"), values: [...new Set(businesses.flatMap(item => item.categories))].sort() },
-  countries: { element: document.getElementById("countryOptions"), values: [...new Set(businesses.map(item => item.country))].sort() },
-  types: { element: document.getElementById("typeOptions"), values: ["Swiftie-owned", "Taylor-inspired"] }
+  countries: { element: document.getElementById("countryOptions"), values: [...new Set(businesses.map(item => item.country))].sort() }
 };
-const selected = { categories: new Set(), countries: new Set(), types: new Set() };
+const selected = { categories: new Set(), countries: new Set() };
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, char => ({
@@ -39,18 +38,17 @@ function updateFilterSummary() {
 function renderBusinesses() {
   const term = searchInput.value.trim().toLowerCase();
   const matches = businesses.filter(item => {
-    const haystack = [item.name, item.categories.join(" "), item.country, item.type.join(" "), item.description].join(" ").toLowerCase();
+    const haystack = [item.name, item.categories.join(" "), item.country, item.description].join(" ").toLowerCase();
     const matchesSearch = haystack.includes(term);
     // OR within each filter group; AND between groups.
     const matchesCategory = !selected.categories.size || item.categories.some(value => selected.categories.has(value));
     const matchesCountry = !selected.countries.size || selected.countries.has(item.country);
-    const matchesType = !selected.types.size || item.type.some(value => selected.types.has(value));
-    return matchesSearch && matchesCategory && matchesCountry && matchesType;
+    return matchesSearch && matchesCategory && matchesCountry;
   });
 
   grid.innerHTML = matches.map(item => `
     <article class="business-card">
-      <div class="card-top"><span class="card-symbol">${escapeHtml(item.symbol)}</span><span class="card-type">${escapeHtml(item.type.join(" · "))}</span></div>
+      <div class="card-top"><span class="card-symbol">${escapeHtml(item.symbol)}</span></div>
       <h3>${escapeHtml(item.name)}</h3>
       <p>${escapeHtml(item.description)}</p>
       <div class="card-tags">${item.categories.map(category => `<span>${escapeHtml(category)}</span>`).join("")}</div>

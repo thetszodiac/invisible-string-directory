@@ -21,7 +21,6 @@ Edit `businesses.js`. Each entry follows this structure:
   name: "Business name",
   categories: ["Art & Prints", "Stationery"],
   country: "United Kingdom",
-  type: ["Swiftie-owned"] // add "Taylor-inspired" too if both apply
   description: "A short description.",
   url: "https://your-shop.example",
   symbol: "B"
