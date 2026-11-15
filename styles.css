@@ -462,13 +462,13 @@ h2 {
   }
 
   .spotlight-card {
-    top: 42%;
-    height: 55%;
+    top: 46%;
+    height: 51%;
     z-index: 2;
   }
 
   .paper-back {
-    top: 40%;
+    top: 44%;
     height: 55%;
   }
 }
