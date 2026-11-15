@@ -7,6 +7,8 @@ const businesses = [
 
   { name: "Daisy Wood Design", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Explore vibrant, eco-friendly planters and home decor designed to brighten spaces and inspire joy.", url: "https://www.daisywooddesign.com/shop", symbol: "D" },
 
+  { name: "Day Of The Moon", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Graphic tees, sweatshirts and tote bags inspired by Taylor's music, alongside other music artists.", url: "https://dayofthemoon.com/collections/eras-collection?page=1", symbol: "D" },
+  
   { name: "Dork Face Creates", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Swiftie and pop culture themed illustrated products such as art prints, stickers, notebooks, and much more.", url: "https://dorkfacecreates.com", symbol: "D" },
 
   { name: "Foolery Co.", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Whimsical designs for serendipitous times. Funny graphic tees, protest shirts, and gifts designed by Foolery.", url: "https://www.fooleryco.com", symbol: "F" },
@@ -25,7 +27,7 @@ const businesses = [
 
   { name: "Oh Snap Bracelets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Bedazzled keychains, phone charms, bracelets, and more! Bedazzled all the things!", url: "https://www.etsy.com/shop/OhSnapBracelets", symbol: "O" },
 
-  { name: "Schoolhouse Sweets.", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Delicious custom cookies alongside Swiftie-inspired keychains and custom painted shoes.", url: "https://schoolhousesweetsandcrafts.square.site/", symbol: "S" },
+  { name: "Schoolhouse Sweets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Delicious custom cookies alongside Swiftie-inspired keychains and custom painted shoes.", url: "https://schoolhousesweetsandcrafts.square.site/", symbol: "S" },
 
   { name: "Sparta Candle Co.", categories: ["Home & Lifestyle"], country: "USA", description: "Intricately designed soap, candles, and home & body products to serve as functional art and add a little magic to everyday life.", url: "https://spartacandleco.com/", symbol: "S" },
 
