@@ -112,8 +112,7 @@ if (submissionForm) {
   // Apps Script sends an explicit result message from the hidden iframe.
   // Only accept messages from the iframe used by this form.
   window.addEventListener("message", event => {
-    if (!submissionFrame || event.source !== submissionFrame.contentWindow) return;
-    if (!event.data || event.data.type !== "invisible-string-submission") return;
+  if (!event.data || event.data.type !== "invisible-string-submission") return;
     if (!submissionInProgress) return;
 
     clearTimeout(submissionTimeout);
