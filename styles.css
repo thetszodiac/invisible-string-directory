@@ -140,18 +140,34 @@ button,a,input{ -webkit-tap-highlight-color:transparent }
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 
-/* Primary wordmark logo */
-.brand { min-width: 0; }
-.brand-logo { display: block; width: min(100%, 300px); height: auto; object-fit: contain; }
-.site-header .brand { flex: 0 1 300px; }
-.footer-brand { align-items: flex-start; }
-.footer-brand .brand-logo { width: 220px; }
+
+/* Responsive primary wordmark logo — compact header sizing */
+.site-header { min-height: 76px; }
+.site-header .brand {
+  flex: 0 1 210px;
+  width: 210px;
+  max-width: 210px;
+  min-width: 0;
+}
+.brand-logo {
+  display: block;
+  width: 100%;
+  max-width: 210px;
+  height: auto;
+  object-fit: contain;
+}
+.footer-brand { width: 165px; max-width: 165px; }
+.footer-brand .brand-logo { width: 100%; max-width: 165px; }
 @media (max-width: 800px) {
-  .site-header .brand { flex-basis: 245px; }
-  .site-header .brand-logo { width: 245px; }
+  .site-header { min-height: 68px; gap: 14px; }
+  .site-header .brand { flex-basis: 165px; width: 165px; max-width: 165px; }
+  .site-header .brand-logo { max-width: 165px; }
 }
 @media (max-width: 480px) {
-  .site-header .brand { flex-basis: 190px; }
-  .site-header .brand-logo { width: 190px; }
-  .footer-brand .brand-logo { width: 190px; }
+  .site-header { min-height: 60px; padding: 10px 5%; }
+  .site-header .brand { flex-basis: 135px; width: 135px; max-width: 135px; }
+  .site-header .brand-logo { max-width: 135px; }
+  .site-header nav { margin-left: auto; }
+  .footer-brand { width: 145px; max-width: 145px; }
+  .footer-brand .brand-logo { max-width: 145px; }
 }
