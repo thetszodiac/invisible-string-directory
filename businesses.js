@@ -15,7 +15,7 @@ const businesses = [
 
   { name: "Nova & the new moon", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Swiftie and pop culture inspired sweatshirts, t-shirts, art prints, postcards and more.", url: "https://novaandthenewmoon.com", symbol: "N" },
   
-  { name: "The ReSwiftance", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Blending Swiftiehood with progressive politics, shop thematic apparel, stickers and much more.", url: "https://the-reswiftance.printify.me", symbol: "R" },
+  { name: "The ReSwiftance", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Blending Swiftiehood with progressive politics - shop thematic apparel, stickers and much more.", url: "https://the-reswiftance.printify.me", symbol: "R" },
 
   { name: "Oh Snap Bracelets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Bedazzled keychains, phone charms, bracelets, and more! Bedazzled all the things!", url: "https://www.etsy.com/shop/OhSnapBracelets", symbol: "O" },
 
