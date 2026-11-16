@@ -29,6 +29,8 @@ const businesses = [
 
   { name: "Oh Snap Bracelets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Bedazzled keychains, phone charms, bracelets, and more! Bedazzled all the things!", url: "https://www.etsy.com/shop/OhSnapBracelets", symbol: "O" },
 
+  { name: "Paperbacks and Prints", categories: ["Art & Prints"], country: "UK", description: "Digital downloads of prints and kindle inserts for Swifties and book lovers.", url: "https://paperbacksandprints.etsy.com/", symbol: "P" },
+
   { name: "The Polite Bee", categories: ["Art & Prints", "Home & Lifestyle"], country: "Australia", description: "Mini guitars, vinyl toppers, magnets, lithographs, and other handmade trinkets.", url: "https://thepolitebee.com", symbol: "P" },
 
   { name: "The ReSwiftance", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Blending Swiftiehood with progressive politics - shop thematic apparel, stickers and much more.", url: "https://the-reswiftance.printify.me", symbol: "R" },
