@@ -7,7 +7,7 @@ const businesses = [
 
   { name: "Daisy Wood Design", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Explore vibrant, eco-friendly planters and home decor designed to brighten spaces and inspire joy.", url: "https://www.daisywooddesign.com/shop/swiftie", symbol: "D" },
 
-  { name: "Day Of The Moon", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Graphic tees, sweatshirts and tote bags inspired by Taylor's music, alongside other music artists.", url: "https://dayofthemoon.com/collections/eras-collection?page=1", symbol: "D" },
+  { name: "Day Of The Moon", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Graphic tees, sweatshirts and tote bags inspired by Taylor's music, alongside other musical artists.", url: "https://dayofthemoon.com/collections/eras-collection?page=1", symbol: "D" },
   
   { name: "Dorkface Creates", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Swiftie and pop culture themed illustrated products such as art prints, stickers, notebooks, and much more.", url: "https://dorkfacecreates.com", symbol: "D" },
 
@@ -15,11 +15,11 @@ const businesses = [
   
   { name: "Foolery Co.", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Whimsical designs for serendipitous times. Funny graphic tees, protest shirts, and gifts designed by Foolery.", url: "https://www.fooleryco.com", symbol: "F" },
 
-  { name: "Gemma Rose Pins", categories: ["Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Shop Swiftie-inspired enamel pins, stickers, blankets, jewellery, apparel and more.", url: "https://gemmarosepins.com", symbol: "G" },
+  { name: "Gemma Rose Pins", categories: ["Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Swiftie-inspired enamel pins, stickers, blankets, jewellery, apparel and more.", url: "https://gemmarosepins.com", symbol: "G" },
 
   { name: "Long Story Short Bracelet Co.", categories: ["Jewellery & Accessories"], country: "USA", description: "Shop beautiful friendship bracelets to support Lisa who is a full-time caregiver to her son.", url: "https://www.etsy.com/shop/LSSBraceletCo", symbol: "L" },
 
-  { name: "Mango Illustrated", categories: ["Stationery"], country: "USA", description: "Shop their collection of stickers, pens, and notepads - playfully profound, randomly relatable, and made for self-gifting.", url: "https://mangoillustrated.com/collections/all-swiftie", symbol: "M" },
+  { name: "Mango Illustrated", categories: ["Stationery"], country: "USA", description: "Stickers, pens, notepads... stationery heaven! Playfully profound, randomly relatable, and made for self-gifting.", url: "https://mangoillustrated.com/collections/all-swiftie", symbol: "M" },
 
   { name: "The Mock Turtle", categories: ["Art & Prints", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Taylor Swift merchandise including apparel, trinket dishes, puzzles, and themed home goods.", url: "https://themockturtle.co.uk/", symbol: "M" },
 
