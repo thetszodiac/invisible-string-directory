@@ -9,7 +9,7 @@ const businesses = [
 
   { name: "Day Of The Moon", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Graphic tees, sweatshirts and tote bags inspired by Taylor's music, alongside other music artists.", url: "https://dayofthemoon.com/collections/eras-collection?page=1", symbol: "D" },
   
-  { name: "Dork Face Creates", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Swiftie and pop culture themed illustrated products such as art prints, stickers, notebooks, and much more.", url: "https://dorkfacecreates.com", symbol: "D" },
+  { name: "Dorkface Creates", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Swiftie and pop culture themed illustrated products such as art prints, stickers, notebooks, and much more.", url: "https://dorkfacecreates.com", symbol: "D" },
 
   { name: "Foolery Co.", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Whimsical designs for serendipitous times. Funny graphic tees, protest shirts, and gifts designed by Foolery.", url: "https://www.fooleryco.com", symbol: "F" },
 
