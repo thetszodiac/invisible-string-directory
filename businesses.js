@@ -11,6 +11,8 @@ const businesses = [
   
   { name: "Dorkface Creates", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Swiftie and pop culture themed illustrated products such as art prints, stickers, notebooks, and much more.", url: "https://dorkfacecreates.com", symbol: "D" },
 
+  { name: "The Embroidery Department", categories: ["Home & Lifestyle"], country: "USA", description: "Custom embroidery, beginner-friendly kits, digital stencil guides, seasonal collections, and little clubs made for stitching together.", url: "https://the-embroidery-department.square.site/s/shop", symbol: "E" },
+  
   { name: "Foolery Co.", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Whimsical designs for serendipitous times. Funny graphic tees, protest shirts, and gifts designed by Foolery.", url: "https://www.fooleryco.com", symbol: "F" },
 
   { name: "Gemma Rose Pins", categories: ["Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Shop Swiftie-inspired enamel pins, stickers, blankets, jewellery, apparel and more.", url: "https://gemmarosepins.com", symbol: "G" },
