@@ -26,15 +26,16 @@ const businesses = [
   { name: "The Mock Turtle", categories: ["Art & Prints", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Taylor Swift merchandise including apparel, trinket dishes, puzzles, and themed home goods.", url: "https://themockturtle.co.uk/", symbol: "M" },
 
   { name: "Nova & the new moon", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Swiftie and pop culture inspired sweatshirts, t-shirts, art prints, postcards and more.", url: "https://novaandthenewmoon.com", symbol: "N" },
-  
-  { name: "The ReSwiftance", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Blending Swiftiehood with progressive politics - shop thematic apparel, stickers and much more.", url: "https://the-reswiftance.printify.me", symbol: "R" },
 
   { name: "Oh Snap Bracelets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Bedazzled keychains, phone charms, bracelets, and more! Bedazzled all the things!", url: "https://www.etsy.com/shop/OhSnapBracelets", symbol: "O" },
 
   { name: "The Polite Bee", categories: ["Art & Prints", "Home & Lifestyle"], country: "Australia", description: "Mini guitars, vinyl toppers, magnets, lithographs, and other handmade trinkets.", url: "https://thepolitebee.com", symbol: "P" },
 
+  { name: "The ReSwiftance", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Blending Swiftiehood with progressive politics - shop thematic apparel, stickers and much more.", url: "https://the-reswiftance.printify.me", symbol: "R" },
+  
   { name: "Schoolhouse Sweets", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Delicious custom cookies alongside Swiftie-inspired keychains and custom painted shoes.", url: "https://schoolhousesweetsandcrafts.square.site/", symbol: "S" },
 
   { name: "Sparta Candle Co.", categories: ["Home & Lifestyle"], country: "USA", description: "Intricately designed soap, candles, and home & body products to serve as functional art and add a little magic to everyday life.", url: "https://spartacandleco.com/collections/swiftie-collection?_su_rec=G_goAxbZNt7VW-TQekZKME4ZIg5FRA5zCTQlhBWLU0zINS66WM3OGxi9jV_2Ru0llJlcq9ojr88VTmJbOY1bsp0bYef2F58d04QTtKzOJAsfimtur80olHMq3VrJjp43NxSqh-4kM9J8b8JHZ9Vn2ffEUicf_FuMA7UEhB-INi1YieLbT_kNcJOEuUwpQ-HMKtr0qU7yMfb7E1J8T_j3lxL9JvLZnGT4IjQtTx5aQQFHLISjC84Lix6DoQKBYvMDmRud5mBQaQ&_su_rec_id=d99e409a-6674-4245-990c-49908a766e1c-1794786854", symbol: "S" },
 
+  { name: "Typo Lettering Co.", categories: ["Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Swiftie stickers, magnets, keychains and orher gorgeous little things.", url: "https://typoletteringco.etsy.com/", symbol: "T" },
 ];
