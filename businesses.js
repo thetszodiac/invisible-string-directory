@@ -5,6 +5,8 @@ const businesses = [
   
   { name: "The Cardigan Department", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Discover unique cardigans, sweaters and knitwear inspired by music, film and pop culture.", url: "https://thecardigandepartment.com/", symbol: "C" },
 
+  { name: "Colors4Love", categories: ["Jewellery & Accessories"], country: "USA", description: "Beautiful friendship bracelets to keep the Eras magic going, alongside other fun and colourful jewellery.", url: "https://Colors4LoveDesigns.etsy.com/", symbol: "C" },
+  
   { name: "Daisy Wood Design", categories: ["Home & Lifestyle", "Jewellery & Accessories"], country: "USA", description: "Explore vibrant, eco-friendly planters and home decor designed to brighten spaces and inspire joy.", url: "https://www.daisywooddesign.com/shop/swiftie", symbol: "D" },
 
   { name: "Day Of The Moon", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Graphic tees, sweatshirts and tote bags inspired by Taylor's music, alongside other musical artists.", url: "https://dayofthemoon.com/collections/eras-collection?page=1", symbol: "D" },
