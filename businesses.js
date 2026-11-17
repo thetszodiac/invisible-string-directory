@@ -29,6 +29,8 @@ const businesses = [
 
   { name: "Mango Illustrated", categories: ["Stationery"], country: "USA", description: "Stickers, pens, notepads... stationery heaven! Playfully profound, randomly relatable, and made for self-gifting.", url: "https://mangoillustrated.com/collections/all-swiftie", symbol: "M" },
 
+  { name: "Mirrorball Magic", categories: ["Home & Lifestyle"], country: "USA", description: "A women-centered travel and friendship community inspired by the magic of Taylor Swift, offering themed multi-day retreats, bringing Swifties together through thoughtfully planned activities, shared experiences, and plenty of opportunities to make genuine connections.", url: "https://mirrorballmagic.com", symbol: "M" },
+  
   { name: "The Mock Turtle", categories: ["Art & Prints", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Taylor Swift merchandise including apparel, trinket dishes, puzzles, and themed home goods.", url: "https://themockturtle.co.uk/", symbol: "M" },
 
   { name: "Nova & the new moon", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Swiftie and pop culture inspired sweatshirts, t-shirts, art prints, postcards and more.", url: "https://novaandthenewmoon.com", symbol: "N" },
