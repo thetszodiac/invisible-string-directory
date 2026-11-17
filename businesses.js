@@ -17,6 +17,8 @@ const businesses = [
 
   { name: "Gemma Rose Pins", categories: ["Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "UK", description: "Swiftie-inspired enamel pins, stickers, blankets, jewellery, apparel and more.", url: "https://gemmarosepins.com", symbol: "G" },
 
+  { name: "Heartly Things", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "Germany", description: "Taylor lyric inspired sweatshirts & tees, tote bags, jewellery, phone cases and more.", url: "https://heartlythings.com/collections/miss-americana", symbol: "H" },
+  
   { name: "Lyrics and Lit", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "USA", description: "Subtle designs for the Swiftie who wants to wear their favorite lyrics daily.", url: "https://www.etsy.com/shop/lyricsandlit", symbol: "L" },
   
   { name: "Long Story Short Bracelet Co.", categories: ["Jewellery & Accessories"], country: "USA", description: "Shop beautiful friendship bracelets to support Lisa who is a full-time caregiver to her son.", url: "https://www.etsy.com/shop/LSSBraceletCo", symbol: "L" },
