@@ -44,13 +44,16 @@ function updateFilterSummary() {
 }
 function renderBusinesses() {
   const term = searchInput.value.trim().toLowerCase();
+
   const matches = businesses.filter(item => {
     const haystack = [item.name, item.categories.join(" "), item.country, item.description].join(" ").toLowerCase();
+
     const matchesSearch = haystack.includes(term);
-    // OR within each filter group; AND between groups.
     const matchesCategory = !selected.categories.size || item.categories.some(value => selected.categories.has(value));
     const matchesCountry = !selected.countries.size || selected.countries.has(item.country);
-    return matchesSearch && matchesCategory && matchesCountry;
+    const matchesLetter = selectedLetter === "all" || item.symbol.toUpperCase() === selectedLetter;
+
+    return matchesSearch && matchesCategory && matchesCountry && matchesLetter;
   });
 
   grid.innerHTML = matches.map(item => `
@@ -65,6 +68,7 @@ function renderBusinesses() {
   resultCount.textContent = `${matches.length} ${matches.length === 1 ? "business" : "businesses"} found`;
   emptyState.hidden = matches.length > 0;
   updateFilterSummary();
+  updateAlphabetIndex();
 }
 Object.entries(filterGroups).forEach(([groupName, group]) => {
   group.element.addEventListener("change", event => {
