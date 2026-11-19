@@ -580,6 +580,59 @@ h2 em {
   font-size: 11px;
 }
 
+/* Alphabetical business index */
+
+.alphabet-filter {
+  margin-top: 18px;
+}
+
+.alphabet-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.alphabet-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.letter-button {
+  min-width: 34px;
+  height: 34px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--walnut);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.letter-button:hover:not(:disabled),
+.letter-button.active {
+  background: var(--walnut);
+  border-color: var(--walnut);
+  color: var(--paper);
+}
+
+.letter-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.letter-button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
 /* 9. Business listing cards */
 .business-grid {
   display: grid;
