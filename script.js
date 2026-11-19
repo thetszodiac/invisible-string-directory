@@ -2,6 +2,8 @@ const grid = document.getElementById("businessGrid");
 const searchInput = document.getElementById("searchInput");
 const resultCount = document.getElementById("resultCount");
 const emptyState = document.getElementById("emptyState");
+const alphabetIndex = document.getElementById("alphabetIndex");
+let selectedLetter = "all";
 
 const filterGroups = {
   categories: { element: document.getElementById("categoryOptions"), values: [...new Set(businesses.flatMap(item => item.categories))].sort() },
