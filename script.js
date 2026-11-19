@@ -42,6 +42,39 @@ function updateFilterSummary() {
   const total = Object.values(selected).reduce((sum, set) => sum + set.size, 0);
   document.getElementById("activeFilterCount").textContent = total ? `${total} filter${total === 1 ? "" : "s"} selected` : "No filters selected";
 }
+function updateAlphabetIndex() {
+  const availableLetters = new Set(
+    businesses.map(item => item.symbol.toUpperCase())
+  );
+
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+  alphabetIndex.innerHTML = `
+    <button
+      type="button"
+      class="letter-button ${selectedLetter === "all" ? "active" : ""}"
+      data-letter="all"
+      aria-pressed="${selectedLetter === "all"}"
+    >All</button>
+    ${letters.map(letter => `
+      <button
+        type="button"
+        class="letter-button ${selectedLetter === letter ? "active" : ""}"
+        data-letter="${letter}"
+        aria-pressed="${selectedLetter === letter}"
+        ${availableLetters.has(letter) ? "" : "disabled"}
+      >${letter}</button>
+    `).join("")}
+  `;
+}
+
+alphabetIndex.addEventListener("click", event => {
+  const button = event.target.closest("[data-letter]");
+  if (!button || button.disabled) return;
+
+  selectedLetter = button.dataset.letter;
+  renderBusinesses();
+});
 function renderBusinesses() {
   const term = searchInput.value.trim().toLowerCase();
 
