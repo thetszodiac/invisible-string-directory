@@ -128,7 +128,7 @@ Object.entries(filterGroups).forEach(([groupName, group]) => {
 });
 searchInput.addEventListener("input", renderBusinesses);
 document.getElementById("clearFilters").addEventListener("click", () => {
-  Object.values(selected).forEach(set => set.clear());
+  Object.values(selected).forEach(set => set.clear()); selectedLetter = "all";
   document.querySelectorAll(".filter-option input").forEach(input => { input.checked = input.dataset.all === "true"; });
   searchInput.value = "";
   renderBusinesses();
