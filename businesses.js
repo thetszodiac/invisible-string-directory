@@ -17,7 +17,7 @@ const businesses = [
   
   { name: "Dorkface Creates", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Swiftie and pop culture themed illustrated products such as art prints, stickers, notebooks, and much more.", url: "https://dorkfacecreates.com", symbol: "D" },
 
-  { name: "Eddie Lane", categories: ["Clothing & Apparel", “Home & Lifestyle”], country: "USA", description: "Super soft tees, crews and home goods featuring vintage, pop culture designs.", url: “https://shopeddielane.com", symbol: "E" },
+  { name: "Eddie Lane", categories: ["Clothing & Apparel", "Home & Lifestyle"], country: "USA", description: "Super soft tees, crews and home goods featuring vintage, pop culture designs.", url: "https://shopeddielane.com", symbol: "E" },
   
   { name: "The Embroidery Department", categories: ["Home & Lifestyle"], country: "USA", description: "Custom embroidery, beginner-friendly kits, digital stencil guides, seasonal collections, and little clubs made for stitching together.", url: "https://the-embroidery-department.square.site/s/shop", symbol: "E" },
   
@@ -59,7 +59,7 @@ const businesses = [
 
   { name: "Third Wish Designs", categories: ["Clothing & Apparel", "Stationery"], country: "USA", description: "A place where all your Swiftie x Disney mashup dreams come true! Shop graphic tees perfect for subtly showing off your favourite Taylor Swift songs on your next Disney trip.", url: "https://thirdwishdesigns.com/collections/taylor-swift-mashups", symbol: "T" },
 
-  { name: "The Tortured Embroidery Department", categories: ["Home & Lifestyle"], country: "UK", description: "Beautiful embroidery hoops featuring some of Taylor’s most iconic lyrics.", url: “https://ttembroiderydepartment.etsy.com/", symbol: "T" },
+  { name: "The Tortured Embroidery Department", categories: ["Home & Lifestyle"], country: "UK", description: "Beautiful embroidery hoops featuring some of Taylor’s most iconic lyrics.", url: "https://ttembroiderydepartment.etsy.com/", symbol: "T" },
   
   { name: "Two Lost Girls Art", categories: ["Art & Prints", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Shop enamel pins, stickers, puzzles, blankets, jewellery, album-themed bundles and other Swiftie-inspired gifts.", url: "https://twolostgirlsart.com", symbol: "T" },
   
