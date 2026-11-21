@@ -25,10 +25,10 @@ const businesses = [
 
   { name: "Hébe Jewel", categories: ["Jewellery & Accessories"], country: "Greece", description: "Taylor Swift inspired charms that you can mix and match to create your own personalized necklaces, bracelets, and keychains. Ready-to-wear jewellery also available.", url: "https://hebejewel.com", symbol: "H" },
   
-  { name: "Lyrics and Lit", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "USA", description: "Subtle designs for the Swiftie who wants to wear their favorite lyrics daily.", url: "https://www.etsy.com/shop/lyricsandlit", symbol: "L" },
-  
   { name: "Long Story Short Bracelet Co.", categories: ["Jewellery & Accessories"], country: "USA", description: "Shop beautiful friendship bracelets to support Lisa who is a full-time caregiver to her son.", url: "https://www.etsy.com/shop/LSSBraceletCo", symbol: "L" },
 
+  { name: "Lyrics and Lit", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "USA", description: "Subtle designs for the Swiftie who wants to wear their favorite lyrics daily.", url: "https://www.etsy.com/shop/lyricsandlit", symbol: "L" },
+  
   { name: "Mango Illustrated", categories: ["Stationery"], country: "USA", description: "Stickers, pens, notepads... stationery heaven! Playfully profound, randomly relatable, and made for self-gifting.", url: "https://mangoillustrated.com/collections/all-swiftie", symbol: "M" },
 
   { name: "Mirrorball Magic", categories: ["Home & Lifestyle"], country: "USA", description: "A women-centered travel and friendship community inspired by the magic of Taylor Swift, offering themed multi-day retreats, bringing Swifties together through thoughtfully planned activities, shared experiences, and plenty of opportunities to make genuine connections.", url: "https://mirrorballmagic.com", symbol: "M" },
