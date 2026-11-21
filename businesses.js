@@ -2,6 +2,8 @@
 const businesses = [
 
   { name: "Art By Carmie", categories: ["Art & Prints"], country: "The Netherlands", description: "A curated collection of Taylor Swift–inspired paintings, each thoughtfully paired with a hand-selected vintage frame. Prints also available.", url: "https://carmieperez.com/", symbol: "A" },
+
+  { name: "Broad Spectrum Designs", categories: ["Art & Prints", "Home & Lifestyle"], country: "USA", description: "Celebrate your favourite lyrics, eras, and unforgettable moments with handcrafted Taylor-inspired gifts and décor.", url: "https://broadspectrumdesigns.com/collections/taylor-inspired", symbol: "B" },
   
   { name: "The Cardigan Department", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "UK", description: "Discover unique cardigans, sweaters and knitwear inspired by music, film and pop culture.", url: "https://thecardigandepartment.com/", symbol: "C" },
 
