@@ -17,6 +17,8 @@ const businesses = [
   
   { name: "Dorkface Creates", categories: ["Art & Prints", "Clothing & Apparel", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Swiftie and pop culture themed illustrated products such as art prints, stickers, notebooks, and much more.", url: "https://dorkfacecreates.com", symbol: "D" },
 
+  { name: "Eddie Lane", categories: ["Clothing & Apparel", “Home & Lifestyle”], country: "USA", description: "Super soft tees, crews and home goods featuring vintage, pop culture designs.", url: “https://shopeddielane.com", symbol: "E" },
+  
   { name: "The Embroidery Department", categories: ["Home & Lifestyle"], country: "USA", description: "Custom embroidery, beginner-friendly kits, digital stencil guides, seasonal collections, and little clubs made for stitching together.", url: "https://the-embroidery-department.square.site/s/shop", symbol: "E" },
   
   { name: "Foolery Co.", categories: ["Art & Prints", "Clothing & Apparel", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Whimsical designs for serendipitous times. Funny graphic tees, protest shirts, and gifts designed by Foolery.", url: "https://www.fooleryco.com", symbol: "F" },
