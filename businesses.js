@@ -24,6 +24,8 @@ const businesses = [
   { name: "Heartly Things", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "Germany", description: "Taylor lyric inspired sweatshirts & tees, tote bags, jewellery, phone cases and more.", url: "https://heartlythings.com/collections/miss-americana", symbol: "H" },
 
   { name: "Hébe Jewel", categories: ["Jewellery & Accessories"], country: "Greece", description: "Taylor Swift inspired charms that you can mix and match to create your own personalized necklaces, bracelets, and keychains. Ready-to-wear jewellery also available.", url: "https://hebejewel.com", symbol: "H" },
+
+  { name: "Little Pond Department", categories: ["Art & Prints", "Jewellery & Accessories"], country: "UK", description: "Jewellery & prints inspired by lyrics, quotes & pop culture magic.", url: "https://littleponddepartment.my.canva.site/", symbol: "L" },
   
   { name: "Long Story Short Bracelet Co.", categories: ["Jewellery & Accessories"], country: "USA", description: "Shop beautiful friendship bracelets to support Lisa who is a full-time caregiver to her son.", url: "https://www.etsy.com/shop/LSSBraceletCo", symbol: "L" },
 
