@@ -59,7 +59,7 @@ const businesses = [
 
   { name: "Third Wish Designs", categories: ["Clothing & Apparel", "Stationery"], country: "USA", description: "A place where all your Swiftie x Disney mashup dreams come true! Shop graphic tees perfect for subtly showing off your favourite Taylor Swift songs on your next Disney trip.", url: "https://thirdwishdesigns.com/collections/taylor-swift-mashups", symbol: "T" },
 
-  { name: "The Tortured Embroidery Department", categories: ["Home & Lifestyle"], country: "UK", description: "Beautiful embroidery hoops featuring some of Taylor’s most iconic lyrics.", url: "https://www.etsy.com/market/the_tortured_embroidery_department", symbol: "T" },
+  { name: "The Tortured Embroidery Department", categories: ["Home & Lifestyle"], country: "UK", description: "Beautiful embroidery hoops featuring some of Taylor’s most iconic lyrics.", url: "https://www.etsy.com/uk/shop/ttembroidery/", symbol: "T" },
   
   { name: "Two Lost Girls Art", categories: ["Art & Prints", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Shop enamel pins, stickers, puzzles, blankets, jewellery, album-themed bundles and other Swiftie-inspired gifts.", url: "https://twolostgirlsart.com", symbol: "T" },
   
