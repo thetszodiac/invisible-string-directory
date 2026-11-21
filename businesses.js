@@ -1,6 +1,8 @@
 
 const businesses = [
 
+  { name: "The Archers Thread", categories: ["Clothing & Apparel"], country: "USA", description: "Clothing featuring your favourite Taylor lyrics, alongside Swiftie x pop culture apparel.", url: "https://thearchersthread.com/collections/tortured-poets", symbol: "A" },
+  
   { name: "Art By Carmie", categories: ["Art & Prints"], country: "The Netherlands", description: "A curated collection of Taylor Swift–inspired paintings, each thoughtfully paired with a hand-selected vintage frame. Prints also available.", url: "https://carmieperez.com/", symbol: "A" },
 
   { name: "Broad Spectrum Designs", categories: ["Art & Prints", "Home & Lifestyle"], country: "USA", description: "Celebrate your favourite lyrics, eras, and unforgettable moments with handcrafted Taylor-inspired gifts and décor.", url: "https://broadspectrumdesigns.com/collections/taylor-inspired", symbol: "B" },
