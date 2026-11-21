@@ -30,6 +30,8 @@ const businesses = [
   { name: "Long Story Short Bracelet Co.", categories: ["Jewellery & Accessories"], country: "USA", description: "Shop beautiful friendship bracelets to support Lisa who is a full-time caregiver to her son.", url: "https://www.etsy.com/shop/LSSBraceletCo", symbol: "L" },
 
   { name: "Lyrics and Lit", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "USA", description: "Subtle designs for the Swiftie who wants to wear their favorite lyrics daily.", url: "https://www.etsy.com/shop/lyricsandlit", symbol: "L" },
+
+  { name: "Magical By Marissa", categories: ["Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Clothing, enamel pins, stickers, slip mats, cutting boards, watch bands and collectibles inspired by today's biggest pop stars.", url: "https://magicalbymarissa.com", symbol: "M" },
   
   { name: "Mango Illustrated", categories: ["Stationery"], country: "USA", description: "Stickers, pens, notepads... stationery heaven! Playfully profound, randomly relatable, and made for self-gifting.", url: "https://mangoillustrated.com/collections/all-swiftie", symbol: "M" },
 
