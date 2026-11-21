@@ -56,6 +56,8 @@ const businesses = [
   { name: "Sparta Candle Co.", categories: ["Home & Lifestyle"], country: "USA", description: "Intricately designed soap, candles, and home & body products to serve as functional art and add a little magic to everyday life.", url: "https://spartacandleco.com/collections/swiftie-collection?_su_rec=G_goAxbZNt7VW-TQekZKME4ZIg5FRA5zCTQlhBWLU0zINS66WM3OGxi9jV_2Ru0llJlcq9ojr88VTmJbOY1bsp0bYef2F58d04QTtKzOJAsfimtur80olHMq3VrJjp43NxSqh-4kM9J8b8JHZ9Vn2ffEUicf_FuMA7UEhB-INi1YieLbT_kNcJOEuUwpQ-HMKtr0qU7yMfb7E1J8T_j3lxL9JvLZnGT4IjQtTx5aQQFHLISjC84Lix6DoQKBYvMDmRud5mBQaQ&_su_rec_id=d99e409a-6674-4245-990c-49908a766e1c-1794786854", symbol: "S" },
 
   { name: "Third Wish Designs", categories: ["Clothing & Apparel", "Stationery"], country: "USA", description: "A place where all your Swiftie x Disney mashup dreams come true! Shop graphic tees perfect for subtly showing off your favourite Taylor Swift songs on your next Disney trip.", url: "https://thirdwishdesigns.com/collections/taylor-swift-mashups", symbol: "T" },
+
+  { name: "The Tortured Embroidery Department", categories: ["Home & Lifestyle"], country: "UK", description: "Beautiful embroidery hoops featuring some of Taylor’s most iconic lyrics.", url: “https://ttembroiderydepartment.etsy.com/", symbol: "T" },
   
   { name: "Two Lost Girls Art", categories: ["Art & Prints", "Home & Lifestyle", "Jewellery & Accessories", "Stationery"], country: "USA", description: "Shop enamel pins, stickers, puzzles, blankets, jewellery, album-themed bundles and other Swiftie-inspired gifts.", url: "https://twolostgirlsart.com", symbol: "T" },
   
