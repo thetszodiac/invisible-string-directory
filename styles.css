@@ -519,6 +519,8 @@ h2 em {
 }
 
 .filter-hint {
+  margin-left: auto;
+  text-align: right;
   color: var(--muted);
   font-size: 11px;
   font-weight: 400;
