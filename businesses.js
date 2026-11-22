@@ -1,7 +1,7 @@
 
 const businesses = [
 
-  { name: "The Archers Thread", categories: ["Clothing & Apparel"], country: "USA", description: "Clothing featuring your favourite Taylor lyrics, alongside Swiftie x pop culture apparel.", url: "https://thearchersthread.com/collections/tortured-poets", symbol: "A" },
+  { name: "The Archer's Thread", categories: ["Clothing & Apparel"], country: "USA", description: "Clothing featuring your favourite Taylor lyrics, alongside Swiftie x pop culture apparel.", url: "https://thearchersthread.com/collections/tortured-poets", symbol: "A" },
   
   { name: "Art By Carmie", categories: ["Art & Prints"], country: "The Netherlands", description: "A curated collection of Taylor Swift–inspired paintings, each thoughtfully paired with a hand-selected vintage frame. Prints also available.", url: "https://carmieperez.com/", symbol: "A" },
 
@@ -28,6 +28,8 @@ const businesses = [
   { name: "Heartly Things", categories: ["Clothing & Apparel", "Jewellery & Accessories"], country: "Germany", description: "Taylor lyric inspired sweatshirts & tees, tote bags, jewellery, phone cases and more.", url: "https://heartlythings.com/collections/miss-americana", symbol: "H" },
 
   { name: "Hébe Jewel", categories: ["Jewellery & Accessories"], country: "Greece", description: "Taylor Swift inspired charms that you can mix and match to create your own personalized necklaces, bracelets, and keychains. Ready-to-wear jewellery also available.", url: "https://hebejewel.com", symbol: "H" },
+
+  { name: "Little Owlet Art", categories: ["Stationey"], country: "USA", description: "Intricately detailed, hand-drawn, high quality stickers for evert era!", url: "https://littleowletart.com/", symbol: "L" },
 
   { name: "Little Pond Department", categories: ["Art & Prints", "Jewellery & Accessories"], country: "UK", description: "Jewellery & prints inspired by lyrics, quotes & pop culture magic.", url: "https://littleponddepartment.my.canva.site/", symbol: "L" },
   
